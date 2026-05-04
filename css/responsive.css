@@ -1,0 +1,48 @@
+@media (max-width: 880px) {
+  .nav {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand actions"
+      "links links";
+    row-gap: 8px;
+  }
+
+  .brand {
+    grid-area: brand;
+  }
+
+  .nav__actions {
+    grid-area: actions;
+  }
+
+  .nav__links {
+    grid-area: links;
+    justify-content: flex-start;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .cta__product {
+    order: -1;
+  }
+
+  .split-media {
+    height: 360px;
+  }
+
+  .wall-device {
+    right: 10%;
+    width: 150px;
+  }
+}
