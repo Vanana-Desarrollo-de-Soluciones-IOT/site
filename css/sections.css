@@ -14,8 +14,8 @@
 
 .hero__bg-inner {
   position: absolute;
-  inset: -120px -80px auto -80px;
-  height: 760px;
+  inset: auto -110px 0 -110px;
+  height: 720px;
   filter: saturate(0.1);
 }
 
@@ -23,36 +23,16 @@
   width: 100%;
   height: 100%;
   background: radial-gradient(
-    900px 520px at 50% 48%,
-    #8f959c 0%,
-    #2d3238 42%,
-    rgba(0, 0, 0, 0.9) 72%,
+    circle at 50% 100%,
+    #2a2d30 0%,
+    #0a0a0a 60%,
     #000 100%
   );
-  border-bottom-left-radius: 52% 44%;
-  border-bottom-right-radius: 52% 44%;
-  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.8);
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  box-shadow: 0 -40px 120px rgba(0, 0, 0, 0.9);
   position: relative;
   overflow: hidden;
-}
-
-.globe-grid {
-  position: absolute;
-  inset: 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-  background-size: 28px 28px;
-  opacity: 0.55;
-  mask-image: radial-gradient(closest-side at 50% 52%, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
-}
-
-.globe-lines {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(300px 170px at 35% 62%, rgba(255, 255, 255, 0.18), transparent 70%),
-    radial-gradient(320px 190px at 65% 60%, rgba(255, 255, 255, 0.16), transparent 72%),
-    radial-gradient(420px 220px at 52% 70%, rgba(255, 255, 255, 0.09), transparent 75%);
-  opacity: 0.9;
 }
 
 .hero__content {
@@ -83,41 +63,11 @@
   flex-wrap: wrap;
 }
 
-.device-card {
+.hero__image {
   margin-top: 34px;
   width: min(340px, 70vw);
-  aspect-ratio: 1 / 1.1;
-  border-radius: 12px;
-  background: linear-gradient(140deg, #f0f0f0, #b8b8b8);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.65);
-  position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.18);
-}
-
-.device-card__logo {
-  position: absolute;
-  top: 22px;
-  left: 24px;
-  width: 40px;
-  height: 26px;
-  border-radius: 14px;
-  background: rgba(0, 0, 0, 0.08);
-  display: grid;
-  place-items: center;
-  color: rgba(0, 0, 0, 0.4);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-}
-
-.device-card__dot {
-  position: absolute;
-  right: 22px;
-  bottom: 22px;
-  width: 6px;
-  height: 6px;
-  border-radius: 999px;
-  background: #b3ffb3;
-  box-shadow: 0 0 0 6px rgba(179, 255, 179, 0.1);
+  height: auto;
+  filter: drop-shadow(0 24px 80px rgba(0, 0, 0, 0.65));
 }
 
 /* Sections */
