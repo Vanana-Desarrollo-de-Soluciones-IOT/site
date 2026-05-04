@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clair Alpha</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/section-world.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/media.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
@@ -14,8 +18,8 @@
 
     <nav class="nav-center">
       <a href="#">About</a>
+      <a href="#">Discover</a>
       <a href="#">Pricing</a>
-      <a href="#">Button</a>
     </nav>
 
     <div class="header-right">
@@ -34,8 +38,8 @@
     <div class="mobile-menu" aria-hidden="true">
       <nav class="mobile-nav">
         <a href="#">About</a>
+        <a href="#">Discover</a>
         <a href="#">Pricing</a>
-        <a href="#">Button</a>
       </nav>
       <div class="mobile-actions">
         <button class="icon-btn" title="Lenguaje">
@@ -48,14 +52,9 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-center">
-      <img src="assets/sensor.svg" alt="Sensor" class="sensor-img">
-    </div>
-    <img src="assets/world.png" alt="World 1" class="world-img">
+  <section class="section-1">
+    <canvas id="graph-world"></canvas>
   </section>
-
-  <section class="section-2"></section>
 
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="js/main.js" defer></script>
