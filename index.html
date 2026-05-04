@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clair Alpha</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
@@ -26,9 +26,29 @@
         <i data-lucide="circle-user"></i>
       </button>
     </div>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <i data-lucide="menu"></i>
+    </button>
+
+    <div class="mobile-menu" aria-hidden="true">
+      <nav class="mobile-nav">
+        <a href="#">About</a>
+        <a href="#">Pricing</a>
+        <a href="#">Button</a>
+      </nav>
+      <div class="mobile-actions">
+        <button class="icon-btn" title="Lenguaje">
+          <i data-lucide="globe"></i>
+        </button>
+        <button class="icon-btn" title="Usuario">
+          <i data-lucide="circle-user"></i>
+        </button>
+      </div>
+    </div>
   </header>
 
-<section class="hero">
+  <section class="hero">
     <div class="hero-center">
       <img src="assets/sensor.svg" alt="Sensor" class="sensor-img">
     </div>
@@ -37,8 +57,7 @@
 
   <section class="section-2"></section>
 
-  <script>
-    lucide.createIcons();
-  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
