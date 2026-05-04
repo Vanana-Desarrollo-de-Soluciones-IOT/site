@@ -11,12 +11,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
     <header class="header">
       <nav class="nav container" aria-label="Principal">
         <a class="brand" href="#">
-          <span class="brand__mark" aria-hidden="true">CLAIR</span>
+          <img src="assets/clair.svg" alt="Clair Logo" class="brand__logo" />
           <span class="sr-only">Clair</span>
         </a>
 
@@ -28,10 +29,10 @@
 
         <div class="nav__actions" aria-label="Acciones">
           <button class="icon-btn" type="button" aria-label="Idioma">
-            <span class="icon icon--globe" aria-hidden="true"></span>
+            <i data-lucide="globe" class="icon"></i>
           </button>
           <button class="icon-btn" type="button" aria-label="Cuenta">
-            <span class="icon icon--user" aria-hidden="true"></span>
+            <i data-lucide="circle-user" class="icon"></i>
           </button>
         </div>
       </nav>
@@ -84,18 +85,24 @@
               </div>
               <div class="metric__label">PM2.5</div>
               <div class="metric__desc">Particulate matter detection.</div>
+              <div class="metric__divider"></div>
               <div class="metric__tag">OPTIMAL PURITY</div>
             </article>
 
             <article class="metric" role="listitem">
               <div class="metric__meter">
-                <div class="metric__meter-track" aria-hidden="true"></div>
+                <div class="metric__meter-lines" aria-hidden="true">
+                  <div class="metric__meter-line"></div>
+                  <div class="metric__meter-line"></div>
+                  <div class="metric__meter-line"></div>
+                </div>
                 <div class="metric__meter-pill">
                   <span class="metric__value-inline">20.9%</span>
                 </div>
               </div>
               <div class="metric__label">CO2</div>
               <div class="metric__desc">CO2 saturation monitoring.</div>
+              <div class="metric__divider"></div>
               <div class="metric__tag">ATMOSPHERIC NORM</div>
             </article>
 
@@ -106,6 +113,7 @@
               </div>
               <div class="metric__label">Clean Air Index</div>
               <div class="metric__desc">Holistic calculation of overall air quality.</div>
+              <div class="metric__divider"></div>
               <div class="metric__tag">PRISTINE AIR</div>
             </article>
           </div>
@@ -150,13 +158,8 @@
             </div>
           </div>
 
-          <div class="cta__product" aria-hidden="true">
-            <div class="product-cube">
-              <div class="product-cube__front"></div>
-              <div class="product-cube__side"></div>
-              <div class="product-cube__top"></div>
-              <div class="product-cube__dot"></div>
-            </div>
+          <div class="cta__product">
+            <img src="assets/sensor-last.png" alt="Clair Alpha Sensor" class="cta__image" />
           </div>
         </div>
       </section>
@@ -174,5 +177,8 @@
         </ul>
       </div>
     </footer>
+    <script>
+      lucide.createIcons();
+    </script>
   </body>
 </html>

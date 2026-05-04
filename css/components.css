@@ -17,15 +17,13 @@
 .brand {
   justify-self: start;
   display: inline-flex;
-  gap: 10px;
   align-items: center;
-  letter-spacing: 0.32em;
-  font-weight: 700;
 }
 
-.brand__mark {
-  font-size: 12px;
-  opacity: 0.9;
+.brand__logo {
+  height: 24px;
+  width: auto;
+  display: block;
 }
 
 .nav__links {
@@ -55,56 +53,27 @@
 }
 
 .icon-btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.02);
-  color: var(--text);
+  background: transparent;
+  border: none;
+  color: #fff;
   cursor: pointer;
   display: grid;
   place-items: center;
+  padding: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.icon-btn:hover {
+  opacity: 0.7;
 }
 
 .icon {
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
-  background: linear-gradient(180deg, #aab0b6, #5b6168);
-  opacity: 0.95;
-  position: relative;
-}
-
-.icon--globe::after {
-  content: "";
-  position: absolute;
-  inset: 3px;
-  border: 1px solid rgba(0, 0, 0, 0.65);
-  border-radius: 999px;
-}
-
-.icon--user::after {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.65);
-  top: 3px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.icon--user::before {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 8px;
-  border-radius: 10px 10px 4px 4px;
-  background: rgba(0, 0, 0, 0.65);
-  bottom: 2px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  stroke: #fff;
+  stroke-width: 2px;
+  fill: none;
+  display: block;
 }
 
 /* Buttons */
@@ -121,6 +90,7 @@
   border: 1px solid transparent;
   transition: transform 140ms ease, background 140ms ease, border-color 140ms ease, color 140ms ease;
   user-select: none;
+  font-weight: 500;
 }
 
 .btn:active {
@@ -128,22 +98,23 @@
 }
 
 .btn--primary {
-  background: rgba(0, 0, 0, 0.75);
-  border-color: rgba(255, 255, 255, 0.12);
+  background: #000;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn--primary:hover {
-  background: rgba(0, 0, 0, 0.9);
+  background: #111;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .btn--ghost {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.9);
+  background: #fff;
+  color: #000;
 }
 
 .btn--ghost:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .btn--outline {

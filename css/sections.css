@@ -126,173 +126,157 @@
 }
 
 .section--dark {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 1));
+  background: #000;
 }
 
 .section__header {
   text-align: center;
-  max-width: 720px;
-  margin: 0 auto 54px;
+  max-width: 600px;
+  margin: 0 auto 80px;
 }
 
 .section__header h2 {
-  font-size: clamp(28px, 4vw, 44px);
-  margin: 0 0 12px;
-  letter-spacing: -0.02em;
-  font-weight: 600;
+  font-size: clamp(32px, 5vw, 48px);
+  margin: 0 0 24px;
+  letter-spacing: -0.01em;
+  font-weight: 500;
 }
 
 .section__header p {
   margin: 0;
   color: var(--muted);
-  font-size: 12px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 /* Metrics (sensor section) */
 .metrics {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 56px;
+  gap: 40px;
   align-items: start;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 .metric {
   text-align: center;
-  padding: 10px 10px 0;
-  position: relative;
-}
-
-.metric::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 1px;
-  bottom: 46px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .metric__dial {
-  width: 92px;
-  height: 92px;
-  border-radius: 999px;
-  margin: 0 auto 18px;
-  display: grid;
-  place-items: center;
-  border: 2px solid rgba(255, 255, 255, 0.22);
-  box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.02);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  overflow: hidden;
-}
-
-.metric__dial::after {
-  content: "";
-  position: absolute;
-  inset: 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  opacity: 0.35;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
 }
 
 .metric__dial--blue {
-  border-color: rgba(190, 205, 255, 0.75);
-  box-shadow: inset 0 0 0 10px rgba(140, 165, 255, 0.06);
+  border: 1.5px solid rgba(141, 148, 255, 0.8);
+  box-shadow: 0 0 20px rgba(141, 148, 255, 0.2), inset 0 0 15px rgba(141, 148, 255, 0.1);
 }
 
 .metric__dial--green {
-  border-color: rgba(108, 255, 203, 0.3);
-  box-shadow: inset 0 0 0 10px rgba(108, 255, 203, 0.04);
+  border: 1.5px solid rgba(0, 255, 149, 0.4);
+  box-shadow: 0 0 25px rgba(0, 255, 149, 0.1), inset 0 0 15px rgba(0, 255, 149, 0.05);
+}
+
+.metric__dial--green .metric__value,
+.metric__dial--green .metric__unit {
+  color: #00ff95;
 }
 
 .metric__value {
   font-weight: 700;
-  font-size: 22px;
-  letter-spacing: 0.01em;
+  font-size: 28px;
+  letter-spacing: -0.02em;
   line-height: 1;
 }
 
 .metric__unit {
-  margin-top: 6px;
-  font-size: 9px;
-  letter-spacing: 0.14em;
-  color: rgba(255, 255, 255, 0.48);
+  margin-top: 4px;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  opacity: 0.8;
 }
 
 .metric__meter {
-  width: 240px;
-  max-width: 100%;
-  margin: 0 auto 18px;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  height: 82px;
-  display: grid;
-  place-items: center;
 }
 
-.metric__meter-track {
+.metric__meter-lines {
   position: absolute;
-  inset: 50% 0 auto 0;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.09);
-  transform: translateY(-50%);
+  width: 180px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.metric__meter-track::before,
-.metric__meter-track::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 64px;
-  height: 2px;
-  background: rgba(190, 205, 255, 0.3);
-  transform: translateY(-50%);
-}
-
-.metric__meter-track::before {
-  left: 0;
-}
-
-.metric__meter-track::after {
-  right: 0;
+.metric__meter-line {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, rgba(141, 148, 255, 0.4), transparent);
 }
 
 .metric__meter-pill {
-  border-radius: 999px;
-  padding: 10px 22px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 1;
+  background: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 28px;
+  border-radius: 100px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .metric__value-inline {
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  font-size: 22px;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.01em;
 }
 
 .metric__label {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.75);
-  margin-top: 8px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 12px;
 }
 
 .metric__desc {
-  margin-top: 12px;
-  font-size: 11px;
+  font-size: 12px;
   color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 24px;
+  max-width: 200px;
+  line-height: 1.5;
+}
+
+.metric__divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 24px;
 }
 
 .metric__tag {
-  margin-top: 34px;
-  padding-top: 16px;
-  border-top: 0;
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 /* Split section */
@@ -399,59 +383,12 @@
   place-items: center;
 }
 
-.product-cube {
-  width: min(280px, 64vw);
-  aspect-ratio: 1 / 1;
-  position: relative;
-  transform: rotateY(-30deg) rotateX(10deg);
-  transform-style: preserve-3d;
-}
-
-.product-cube__front,
-.product-cube__side,
-.product-cube__top {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(140deg, #f1f1f1, #bdbdbd);
-  border: 1px solid rgba(0, 0, 0, 0.18);
-  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
-}
-
-.product-cube__front {
-  transform: translateZ(22px);
-  border-radius: 10px;
-}
-
-.product-cube__side {
-  width: 44px;
-  left: auto;
-  right: -44px;
-  transform: rotateY(90deg) translateZ(22px);
-  transform-origin: left center;
-  border-radius: 8px;
-  filter: brightness(0.9);
-}
-
-.product-cube__top {
-  height: 44px;
-  bottom: auto;
-  top: -44px;
-  transform: rotateX(90deg) translateZ(22px);
-  transform-origin: center bottom;
-  border-radius: 8px;
-  filter: brightness(1.05);
-}
-
-.product-cube__dot {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  right: 16px;
-  bottom: 18px;
-  background: #b3ffb3;
-  transform: translateZ(24px);
-  box-shadow: 0 0 0 10px rgba(179, 255, 179, 0.1);
+.cta__image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.5));
 }
 
 /* Footer */
