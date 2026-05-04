@@ -16,18 +16,15 @@
   position: absolute;
   inset: auto -110px 0 -110px;
   height: 720px;
-  filter: saturate(0.1);
 }
 
 .globe-placeholder {
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-    circle at 50% 100%,
-    #2a2d30 0%,
-    #0a0a0a 60%,
-    #000 100%
-  );
+  background-image: url("../assets/world.png");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
   border-top-left-radius: 50% 100%;
   border-top-right-radius: 50% 100%;
   box-shadow: 0 -40px 120px rgba(0, 0, 0, 0.9);
@@ -52,8 +49,11 @@
 
 .subkicker {
   margin: 10px 0 18px;
-  color: var(--muted);
+  color: var(--text);
   font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
 }
 
 .hero__cta {
