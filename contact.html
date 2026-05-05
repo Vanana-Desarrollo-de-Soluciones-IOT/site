@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Clair</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      /* Contact Section */
+      .contact-section {
+        min-height: auto;
+        padding: 100px 0 120px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: linear-gradient(180deg, #000 0%, #0a0f14 50%, #0f1419 100%);
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .contact-header {
+        text-align: left;
+        margin-bottom: 80px;
+      }
+
+      .contact-header h1 {
+        font-size: clamp(42px, 6vw, 56px);
+        margin: 0 0 16px;
+        letter-spacing: -0.02em;
+        font-weight: 600;
+        background: linear-gradient(135deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1.1;
+      }
+
+      .contact-header p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.6;
+        max-width: 500px;
+      }
+
+      .contact-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 60px;
+        align-items: start;
+      }
+
+      .contact-section-group:last-child {
+        margin-bottom: 20px;
+      }
+
+      .contact-section-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .contact-section-group .location-card {
+        margin-top: 40px;
+      }
+
+      .contact-section-group h2 {
+        font-size: 28px;
+        margin: 0;
+        font-weight: 600;
+        color: #fff;
+        letter-spacing: -0.01em;
+      }
+
+      .contact-section-group p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.7;
+        max-width: 650px;
+      }
+
+      .contact-methods {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        margin-top: 40px;
+      }
+
+      .contact-method {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 0;
+        background: transparent;
+        border: none;
+        position: relative;
+        overflow: visible;
+      }
+
+      .contact-method-icon {
+        width: 24px;
+        height: 24px;
+        color: #fff;
+      }
+
+      .contact-method h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        position: relative;
+        z-index: 1;
+      }
+
+      .contact-method p {
+        margin: 0;
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.6;
+        position: relative;
+        z-index: 1;
+        font-weight: 600;
+      }
+
+      .contact-method a {
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        font-weight: 700;
+        display: inline;
+      }
+
+      .contact-method a:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      /* Headquarters Section - Hidden (merged with Contact) */
+
+      .location-card {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        max-width: 900px;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid rgba(141, 148, 255, 0.3);
+        box-shadow:
+          0 0 1px rgba(141, 148, 255, 0.5),
+          0 0 20px rgba(141, 148, 255, 0.15),
+          0 8px 32px rgba(141, 148, 255, 0.1),
+          inset 0 0 1px rgba(141, 148, 255, 0.2);
+        background: linear-gradient(135deg, rgba(141, 148, 255, 0.05) 0%, rgba(141, 148, 255, 0.02) 100%);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 2;
+      }
+
+      .location-card:hover {
+        border-color: rgba(141, 148, 255, 0.5);
+        box-shadow:
+          0 0 2px rgba(141, 148, 255, 0.6),
+          0 0 30px rgba(141, 148, 255, 0.2),
+          0 16px 48px rgba(141, 148, 255, 0.15),
+          inset 0 0 1px rgba(141, 148, 255, 0.3);
+        transform: translateY(-2px);
+      }
+
+      .location-card iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block;
+      }
+
+      @media (max-width: 640px) {
+        .location-card {
+          aspect-ratio: 16 / 10;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .contact-methods {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 24px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .contact-section {
+          padding: 60px 0;
+        }
+
+        .contact-header {
+          margin-bottom: 50px;
+        }
+
+        .contact-header h1 {
+          font-size: clamp(32px, 5vw, 42px);
+        }
+
+        .contact-header p {
+          font-size: 14px;
+        }
+
+        .contact-content {
+          gap: 40px;
+        }
+
+        .contact-section-group h2 {
+          font-size: 22px;
+        }
+
+        .contact-section-group p {
+          font-size: 13px;
+        }
+
+        .contact-methods {
+          grid-template-columns: 1fr;
+          gap: 16px;
+          margin-top: 24px;
+        }
+
+        .contact-method {
+          padding: 0;
+          gap: 8px;
+        }
+
+        .contact-method h3 {
+          font-size: 14px;
+        }
+
+        .contact-method p {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container" aria-label="Principal">
+        <a class="brand" href="index.html">
+          <img src="assets/clair.svg" alt="Clair Logo" class="brand__logo" />
+          <span class="sr-only">Clair</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <ul class="nav__links-desktop" role="list">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#product">Product</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+        </ul>
+
+        <div class="nav__actions-desktop">
+          <button class="icon-btn" type="button" aria-label="Language">
+            <i data-lucide="globe" class="icon"></i>
+          </button>
+          <button class="icon-btn" type="button" aria-label="Account">
+            <i data-lucide="circle-user" class="icon"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+          <i data-lucide="menu" class="icon"></i>
+        </button>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="nav__menu" id="navMenu">
+          <div class="nav__menu-inner">
+            <ul class="nav__links-mobile" role="list">
+              <li><a href="index.html#about" class="menu-link">About</a></li>
+              <li><a href="index.html#product" class="menu-link">Product</a></li>
+              <li><a href="index.html#pricing" class="menu-link">Pricing</a></li>
+            </ul>
+
+            <div class="nav__actions-mobile">
+              <button class="icon-btn-labeled" type="button">
+                <i data-lucide="globe" class="icon"></i>
+                <span>Language</span>
+              </button>
+              <button class="icon-btn-labeled" type="button">
+                <i data-lucide="circle-user" class="icon"></i>
+                <span>Account</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- CONTACT SECTION -->
+      <section class="section section--dark contact-section" id="contact">
+        <div class="container">
+          <div class="contact-header">
+            <h1>Contact</h1>
+            <p>We're here to answer all your questions about Clair and help you improve air quality in your space.</p>
+          </div>
+
+          <div class="contact-content">
+            <div class="contact-section-group">
+              <h2>Sales & Inquiries</h2>
+              <p>Interested in getting a Clair Alpha? Our sales team is available to help you with product information, pricing, and delivery options.</p>
+
+              <div class="contact-methods">
+                <div class="contact-method">
+                  <i data-lucide="mail" class="contact-method-icon"></i>
+                  <h3>Email</h3>
+                  <p><a href="mailto:sales&#64;clair.com">sales&#64;clair.com</a></p>
+                </div>
+
+                <div class="contact-method">
+                  <i data-lucide="phone" class="contact-method-icon"></i>
+                  <h3>Phone</h3>
+                  <p><a href="tel:+51001234567">+51 (0) 123 456 7</a></p>
+                </div>
+
+                <div class="contact-method">
+                  <i data-lucide="clock" class="contact-method-icon"></i>
+                  <h3>Availability</h3>
+                  <p>Mon - Fri, 9am - 6pm<br/>Peru Time (UTC-5)</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-section-group">
+              <h2>Technical Support</h2>
+              <p>Having technical issues or questions about how to use your Clair? Our support team is ready to help you resolve any inconvenience.</p>
+
+              <div class="contact-methods">
+                <div class="contact-method">
+                  <i data-lucide="mail" class="contact-method-icon"></i>
+                  <h3>Support Email</h3>
+                  <p><a href="mailto:support&#64;clair.com">support&#64;clair.com</a></p>
+                </div>
+
+                <div class="contact-method">
+                  <i data-lucide="help-circle" class="contact-method-icon"></i>
+                  <h3>Help Center</h3>
+                  <p>Documentation, FAQs and user guides available 24/7</p>
+                </div>
+
+                <div class="contact-method">
+                  <i data-lucide="map-pin" class="contact-method-icon"></i>
+                  <h3>Location</h3>
+                  <p>Lima, Peru</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Headquarters Subsection -->
+          <div class="contact-section-group">
+            <h2>Our Headquarters</h2>
+            <p>Visit us at our offices in San Isidro, where our team is ready to help you.</p>
+
+            <div class="location-card">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4236.634368226178!2d-77.05262558902476!3d-12.087410488103187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8560da88193%3A0xc96db500423dd90c!2sUniversidad%20Peruana%20de%20Ciencias%20Aplicadas!5e1!3m2!1ses-419!2spe!4v1777945234295!5m2!1ses-419!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <small>Clair © 2026</small>
+        <ul class="footer__links" role="list" aria-label="Links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#product">Product</a></li>
+          <li><a href="index.html#pricing">Pricing</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+
+      const menuToggle = document.getElementById('menuToggle');
+      const navMenu = document.getElementById('navMenu');
+      const menuLinks = document.querySelectorAll('.menu-link');
+
+      function toggleMenu() {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        navMenu.classList.toggle('is-active');
+        document.body.classList.toggle('menu-open');
+
+        // Swap icons
+        menuToggle.innerHTML = !expanded
+          ? '<i data-lucide="x" class="icon"></i>'
+          : '<i data-lucide="menu" class="icon"></i>';
+        lucide.createIcons();
+      }
+
+      menuToggle.addEventListener('click', toggleMenu);
+
+      // Close menu when clicking a link
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (navMenu.classList.contains('is-active')) {
+            toggleMenu();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
