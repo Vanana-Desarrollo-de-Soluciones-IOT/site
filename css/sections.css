@@ -4,6 +4,7 @@
   min-height: 940px;
   padding-top: 64px;
   overflow: hidden;
+  background: linear-gradient(180deg, #040d16 0%, #0b141d 55%, #182026 100%);
 }
 
 .hero__bg {
