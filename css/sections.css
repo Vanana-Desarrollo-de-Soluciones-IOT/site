@@ -422,6 +422,15 @@
   max-width: 520px;
 }
 
+.cta__price {
+  margin: 10px 0 22px !important;
+  color: var(--text) !important;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
 .cta__buttons {
   display: flex;
   gap: 10px;
