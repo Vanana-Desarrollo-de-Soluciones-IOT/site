@@ -1,63 +1,231 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clair Alpha</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
-</head>
-<body>
-  <header class="header">
-    <img src="assets/logo.svg" alt="Logo" class="logo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clair Alpha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container" aria-label="Principal">
+        <a class="brand" href="#">
+          <img src="assets/clair.svg" alt="Clair Logo" class="brand__logo" />
+          <span class="sr-only">Clair</span>
+        </a>
 
-    <nav class="nav-center">
-      <a href="#">About</a>
-      <a href="#">Pricing</a>
-      <a href="#">Button</a>
-    </nav>
+        <!-- Navegación de Escritorio -->
+        <ul class="nav__links-desktop" role="list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
 
-    <div class="header-right">
-      <button class="icon-btn" title="Lenguaje">
-        <i data-lucide="globe"></i>
-      </button>
-      <button class="icon-btn" title="Usuario">
-        <i data-lucide="circle-user"></i>
-      </button>
-    </div>
+        <div class="nav__actions-desktop">
+          <button class="icon-btn" type="button" aria-label="Idioma">
+            <i data-lucide="globe" class="icon"></i>
+          </button>
+          <button class="icon-btn" type="button" aria-label="Cuenta">
+            <i data-lucide="circle-user" class="icon"></i>
+          </button>
+        </div>
 
-    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
-      <i data-lucide="menu"></i>
-    </button>
+        <!-- Botón Menú (Móvil) -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+          <i data-lucide="menu" class="icon"></i>
+        </button>
 
-    <div class="mobile-menu" aria-hidden="true">
-      <nav class="mobile-nav">
-        <a href="#">About</a>
-        <a href="#">Pricing</a>
-        <a href="#">Button</a>
+        <!-- Menú Overlay (Móvil) -->
+        <div class="nav__menu" id="navMenu">
+          <div class="nav__menu-inner">
+            <ul class="nav__links-mobile" role="list">
+              <li><a href="#about" class="menu-link">About</a></li>
+              <li><a href="#product" class="menu-link">Product</a></li>
+              <li><a href="#pricing" class="menu-link">Pricing</a></li>
+            </ul>
+
+            <div class="nav__actions-mobile">
+              <button class="icon-btn-labeled" type="button">
+                <i data-lucide="globe" class="icon"></i>
+                <span>Language</span>
+              </button>
+              <button class="icon-btn-labeled" type="button">
+                <i data-lucide="circle-user" class="icon"></i>
+                <span>Account</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </nav>
-      <div class="mobile-actions">
-        <button class="icon-btn" title="Lenguaje">
-          <i data-lucide="globe"></i>
-        </button>
-        <button class="icon-btn" title="Usuario">
-          <i data-lucide="circle-user"></i>
-        </button>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="product">
+        <div class="hero__bg" aria-hidden="true">
+          <div class="hero__bg-inner">
+            <div class="globe-placeholder">
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__content container">
+          <p class="kicker">Clair Alpha</p>
+          <p class="subkicker">From S/ 259.90</p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#pricing">Order Now</a>
+            <a class="btn btn--ghost" href="#about">View Product</a>
+          </div>
+
+          <img src="assets/sensor.svg" alt="Clair Alpha Sensor" class="hero__image" />
+        </div>
+      </section>
+
+      <!-- SENSORS -->
+      <section class="section section--dark" id="about">
+        <div class="container">
+          <header class="section__header">
+            <h2>Sensory Intelligence</h2>
+            <p>
+              Advanced spectral analysis providing real-time visibility into your surrounding air quality with
+              laboratory-grade precision.
+            </p>
+          </header>
+
+          <div class="metrics" role="list" aria-label="Métricas">
+            <article class="metric" role="listitem">
+              <div class="metric__dial metric__dial--blue">
+                <div class="metric__value">1.2</div>
+                <div class="metric__unit">MG/M³</div>
+              </div>
+              <div class="metric__label">PM2.5</div>
+              <div class="metric__desc">Particulate matter detection.</div>
+              <div class="metric__divider"></div>
+              <div class="metric__tag">OPTIMAL PURITY</div>
+            </article>
+
+            <article class="metric" role="listitem">
+              <div class="metric__meter">
+                <div class="metric__meter-lines" aria-hidden="true">
+                  <div class="metric__meter-line"></div>
+                  <div class="metric__meter-line"></div>
+                  <div class="metric__meter-line"></div>
+                </div>
+                <div class="metric__meter-pill">
+                  <span class="metric__value-inline">20.9%</span>
+                </div>
+              </div>
+              <div class="metric__label">CO2</div>
+              <div class="metric__desc">CO2 saturation monitoring.</div>
+              <div class="metric__divider"></div>
+              <div class="metric__tag">ATMOSPHERIC NORM</div>
+            </article>
+
+            <article class="metric" role="listitem">
+              <div class="metric__dial metric__dial--green">
+                <div class="metric__value">98</div>
+                <div class="metric__unit">SCORE</div>
+              </div>
+              <div class="metric__label">Clean Air Index</div>
+              <div class="metric__desc">Holistic calculation of overall air quality.</div>
+              <div class="metric__divider"></div>
+              <div class="metric__tag">PRISTINE AIR</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- OFFICE (PLACEHOLDER) -->
+      <section class="section section--dark section--split" aria-label="Invisible Protection">
+        <div class="container">
+          <header class="split__header">
+            <h2>Invisible Protection</h2>
+            <p>
+              Engineered to blend effortlessly into modern spaces, Clair features a minimalist industrial design
+              with sharp angles and an absence of distracting screens, providing continuous environmental monitoring
+              without compromising your interior aesthetic.
+            </p>
+          </header>
+        </div>
+
+        <div class="split-media" aria-hidden="true">
+          <img src="assets/banner.png" alt="Clair Banner" style="width:100%;height:100%;object-fit:cover;" />
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section section--dark section--cta" id="pricing">
+        <div class="container cta">
+          <div class="cta__copy">
+            <h2>Clean your air</h2>
+            <p>
+              Take absolute control of your indoor environment. Precise, real-time tracking for CO2, particulate
+              matter, temperature, and humidity.
+            </p>
+            <div class="cta__buttons">
+              <a class="btn btn--outline" href="#">Order Now</a>
+              <a class="btn btn--ghost" href="#">View Product</a>
+            </div>
+          </div>
+
+          <div class="cta__product">
+            <img src="assets/sensor-last.avif" alt="Clair Alpha Sensor" class="cta__image" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <small>Clair © 2026</small>
+        <ul class="footer__links" role="list" aria-label="Enlaces">
+          <li><a href="#about">About</a></li>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
       </div>
-    </div>
-  </header>
+    </footer>
+    <script>
+      lucide.createIcons();
 
-  <section class="hero">
-    <div class="hero-center">
-      <img src="assets/sensor.svg" alt="Sensor" class="sensor-img">
-    </div>
-    <img src="assets/world.png" alt="World 1" class="world-img">
-  </section>
+      const menuToggle = document.getElementById('menuToggle');
+      const navMenu = document.getElementById('navMenu');
+      const menuLinks = document.querySelectorAll('.menu-link');
 
-  <section class="section-2"></section>
+      function toggleMenu() {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        navMenu.classList.toggle('is-active');
+        document.body.classList.toggle('menu-open');
+        
+        // Swap icons
+        menuToggle.innerHTML = !expanded 
+          ? '<i data-lucide="x" class="icon"></i>' 
+          : '<i data-lucide="menu" class="icon"></i>';
+        lucide.createIcons();
+      }
 
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="js/main.js" defer></script>
-</body>
+      menuToggle.addEventListener('click', toggleMenu);
+
+      // Close menu when clicking a link
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (navMenu.classList.contains('is-active')) {
+            toggleMenu();
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
