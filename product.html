@@ -68,95 +68,67 @@
     </header>
 
     <main>
-      <!-- HERO -->
-      <section class="hero" id="product">
-        <div class="hero__bg" aria-hidden="true">
-          <div class="hero__bg-inner">
-            <div class="globe-placeholder">
-            </div>
-          </div>
-        </div>
-
+      <!-- PRODUCT HERO -->
+      <section class="hero__product" id="product">  
         <div class="hero__content container">
-          <p class="kicker">Clair Alpha</p>
-          <p class="subkicker">From S/ 259.90</p>
-
-          <div class="hero__cta">
-            <a class="btn btn--primary" href="#pricing">Order Now</a>
-            <a class="btn btn--ghost" href="#about">View Product</a>
-          </div>
-
+          <p class="kicker">Meet Clair Alpha</p>         
           <img src="assets/sensor.svg" alt="Clair Alpha Sensor" class="hero__image" />
         </div>
       </section>
 
-      <!-- SENSORS -->
+      <!-- AIR INDEX QUALITY  -->
       <section class="section section--dark" id="about">
         <div class="container">
-          <header class="section__header">
-            <h2>Sensory Intelligence</h2>
-            <p>
-              Advanced spectral analysis providing real-time visibility into your surrounding air quality with
-              laboratory-grade precision.
-            </p>
-          </header>
+            <div class="container">
+                <header class="split__header">
+                    <h2>Air Index Quality</h2>
+                    <p>
+                        Clair Alpha continuously maps the invisible elements of your environment, it synthesizes a comprehensive Air Quality Index.
+                    </p>
+                </header>
+            </div>          
+            <div class="split-media" aria-hidden="true">
+                <img src="assets/gym.png" alt="Clair Banner" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
 
-          <div class="metrics" role="list" aria-label="Métricas">
-            <article class="metric" role="listitem">
-              <div class="metric__dial metric__dial--blue">
-                <div class="metric__value">1.2</div>
-                <div class="metric__unit">MG/M³</div>
-              </div>
-              <div class="metric__label">PM2.5</div>
-              <div class="metric__desc">Particulate matter detection.</div>
-              <div class="metric__divider"></div>
-              <div class="metric__tag">OPTIMAL PURITY</div>
+            <div class="container">
+            <div class="specs" role="list" aria-label="Specs_Header">
+                <article class="spec" role="listitem">              
+                    <header class="spec__section__header">
+                        <h2>Clair Specs</h2> 
+                    </header>
+                </article>
+            </div>
+        </div>        
+
+        <div class="container">    
+          <div class="specs" role="list" aria-label="Métricas">
+            <article class="spec" role="listitem">              
+              <div class="spec__label">Core Processing</div>                                                        
+              <div class="spec__desc">Powered by an advanced ESP32 architecture. This serves as the central intelligence hub, instantly processing multi-sensor data and ensuring seamless Wi-Fi transmission to your network.</div>
             </article>
 
-            <article class="metric" role="listitem">
-              <div class="metric__meter">
-                <div class="metric__meter-lines" aria-hidden="true">
-                  <div class="metric__meter-line"></div>
-                  <div class="metric__meter-line"></div>
-                  <div class="metric__meter-line"></div>
-                </div>
-                <div class="metric__meter-pill">
-                  <span class="metric__value-inline">20.9%</span>
-                </div>
-              </div>
-              <div class="metric__label">CO2</div>
-              <div class="metric__desc">CO2 saturation monitoring.</div>
-              <div class="metric__divider"></div>
-              <div class="metric__tag">ATMOSPHERIC NORM</div>
+            <article class="spec" role="listitem">              
+              <div class="spec__label">Atmospheric Sensing</div>                                                        
+              <div class="spec__desc">Equipped with an SCD41 module for simultaneous, laboratory-grade monitoring. It tracks CO2 saturation, ambient temperature, and relative humidity with absolute precision.</div>
             </article>
 
-            <article class="metric" role="listitem">
-              <div class="metric__dial metric__dial--green">
-                <div class="metric__value">98</div>
-                <div class="metric__unit">SCORE</div>
-              </div>
-              <div class="metric__label">Clean Air Index</div>
-              <div class="metric__desc">Holistic calculation of overall air quality.</div>
-              <div class="metric__divider"></div>
-              <div class="metric__tag">PRISTINE AIR</div>
+            <article class="spec" role="listitem">              
+              <div class="spec__label">Laser Particle Detection</div>                                                        
+              <div class="spec__desc">Utilizes a high-precision PMS5003 laser sensor to continuously measure ultra-fine particulate matter, actively tracking both PM2.5 and PM10 pollutants down to the sub-micron level.</div>
+            </article>
+
+            <article class="spec" role="listitem">              
+              <div class="spec__label">Unobtrusive Interface</div>                                                        
+              <div class="spec__desc">Features a minimalist high-contrast OLED display. Designed for zero distraction, it provides immediate, app-free visibility of critical metrics without compromising the device's sharp, pure silhouette.</div>
             </article>
           </div>
         </div>
-      </section>
+            
+      </section>      
 
       <!-- OFFICE (PLACEHOLDER) -->
-      <section class="section section--dark section--split" aria-label="Invisible Protection">
-        <div class="container">
-          <header class="split__header">
-            <h2>Invisible Protection</h2>
-            <p>
-              Engineered to blend effortlessly into modern spaces, Clair features a minimalist industrial design
-              with sharp angles and an absence of distracting screens, providing continuous environmental monitoring
-              without compromising your interior aesthetic.
-            </p>
-          </header>
-        </div>
-
+      <section class="section section--dark section--split" aria-label="Invisible Protection">        
         <div class="split-media" aria-hidden="true">
           <img src="assets/banner.png" alt="Clair Banner" style="width:100%;height:100%;object-fit:cover;" />
         </div>

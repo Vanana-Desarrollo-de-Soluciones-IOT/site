@@ -3,6 +3,16 @@
     grid-template-columns: 1fr;
     gap: 34px;
   }
+  .specs {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    align-items: center;
+  }
+
+  .spec{
+    text-align: center;
+    align-items: center;
+  }
 
   .cta {
     grid-template-columns: 1fr;
