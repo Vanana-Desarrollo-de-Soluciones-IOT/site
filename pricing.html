@@ -1,168 +1,208 @@
 <!doctype html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pricing - Clair</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+        <script src="https://unpkg.com/lucide@latest"></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pricing - Clair</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
-    <script src="https://unpkg.com/lucide@latest"></script>
-</head>
+    <body>
+        <header class="header">
+            <nav class="nav container" aria-label="Principal">
+                <a class="brand" href="index.html">
+                    <img
+                        src="assets/clair.svg"
+                        alt="Clair Logo"
+                        class="brand__logo"
+                    />
+                    <span class="sr-only">Clair</span>
+                </a>
 
-<body>
-    <header class="header">
-        <nav class="nav container" aria-label="Principal">
-            <a class="brand" href="index.html">
-                <img src="assets/clair.svg" alt="Clair Logo" class="brand__logo" />
-                <span class="sr-only">Clair</span>
-            </a>
+                <!-- Navegación de Escritorio -->
+                <ul class="nav__links-desktop" role="list">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                </ul>
 
-            <!-- Navegación de Escritorio -->
-            <ul class="nav__links-desktop" role="list">
-                <li><a href="about.html">About</a></li>
-                <li><a href="product.html">Product</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-            </ul>
+                <div class="nav__actions-desktop">
+                    <button class="icon-btn" type="button" aria-label="Idioma">
+                        <i data-lucide="globe" class="icon"></i>
+                    </button>
+                    <button class="icon-btn" type="button" aria-label="Cuenta">
+                        <i data-lucide="circle-user" class="icon"></i>
+                    </button>
+                </div>
 
-            <div class="nav__actions-desktop">
-                <button class="icon-btn" type="button" aria-label="Idioma">
-                    <i data-lucide="globe" class="icon"></i>
+                <!-- Botón Menú (Móvil) -->
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Abrir menú"
+                    aria-expanded="false"
+                >
+                    <i data-lucide="menu" class="icon"></i>
                 </button>
-                <button class="icon-btn" type="button" aria-label="Cuenta">
-                    <i data-lucide="circle-user" class="icon"></i>
-                </button>
-            </div>
 
-            <!-- Botón Menú (Móvil) -->
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
-                <i data-lucide="menu" class="icon"></i>
-            </button>
+                <!-- Menú Overlay (Móvil) -->
+                <div class="nav__menu" id="navMenu">
+                    <div class="nav__menu-inner">
+                        <ul class="nav__links-mobile" role="list">
+                            <li>
+                                <a href="about.html" class="menu-link">About</a>
+                            </li>
+                            <li>
+                                <a href="product.html" class="menu-link"
+                                    >Product</a
+                                >
+                            </li>
+                            <li>
+                                <a href="pricing.html" class="menu-link"
+                                    >Pricing</a
+                                >
+                            </li>
+                        </ul>
 
-            <!-- Menú Overlay (Móvil) -->
-            <div class="nav__menu" id="navMenu">
-                <div class="nav__menu-inner">
-                    <ul class="nav__links-mobile" role="list">
-                        <li><a href="about.html" class="menu-link">About</a></li>
-                        <li><a href="product.html" class="menu-link">Product</a></li>
-                        <li><a href="pricing.html" class="menu-link">Pricing</a></li>
-                    </ul>
-
-                    <div class="nav__actions-mobile">
-                        <button class="icon-btn-labeled" type="button">
-                            <i data-lucide="globe" class="icon"></i>
-                            <span>Language</span>
-                        </button>
-                        <button class="icon-btn-labeled" type="button">
-                            <i data-lucide="circle-user" class="icon"></i>
-                            <span>Account</span>
-                        </button>
+                        <div class="nav__actions-mobile">
+                            <button class="icon-btn-labeled" type="button">
+                                <i data-lucide="globe" class="icon"></i>
+                                <span>Language</span>
+                            </button>
+                            <button class="icon-btn-labeled" type="button">
+                                <i data-lucide="circle-user" class="icon"></i>
+                                <span>Account</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
 
-    <main>
-        <!-- CTA / Pricing -->
-        <section class="section section--dark section--cta" id="pricing">
-            <div class="container cta">
-                <div class="cta__copy">
-                    <h2>Clair</h2>
-                    <p class="cta__price">
-                        From S/ 259.90
+        <main>
+            <!-- CTA / Pricing -->
+            <section class="section section--dark section--cta" id="pricing">
+                <div class="container cta">
+                    <div class="cta__copy">
+                        <h1>Clair</h1>
+                        <p class="cta__price">From S/ 259.90</p>
+                        <div class="cta__buttons">
+                            <a class="btn btn--outline" href="pricing.html"
+                                >Order Now</a
+                            >
+                            <a class="btn btn--ghost" href="product.html"
+                                >View Product</a
+                            >
+                        </div>
+                    </div>
+
+                    <div class="cta__product">
+                        <img
+                            src="assets/sensor-last.avif"
+                            alt="Clair Alpha Sensor"
+                            class="cta__image"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <!-- Subscriptions / Pricing Cards -->
+            <section class="section section--dark" id="subscriptions">
+                <div class="container">
+                    <div class="pricing-header">
+                        <h2>Subscriptions</h2>
+                        <p>
+                            Advanced spectral analysis providing real-time
+                            visibility into your surrounding air quality with
+                            laboratory-grade precision.
+                        </p>
+                    </div>
+
+                    <div class="pricing-cards">
+                        <!-- FREE Card -->
+                        <div class="pricing-card">
+                            <h3 class="pricing-card__title">FREE</h3>
+                            <div class="pricing-card__price">S/0</div>
+                            <div class="pricing-card__period">PER MONTH</div>
+
+                            <p class="pricing-card__desc">
+                                Included with your first Clair Alpha.
+                            </p>
+                            <hr class="pricing-card__divider" />
+
+                            <ul class="pricing-card__features">
+                                <li>Support for 1 Clair Alpha device</li>
+                                <li>
+                                    Real-time CO2 and particulate matter
+                                    tracking
+                                </li>
+                                <li>Live environmental dashboard access</li>
+                            </ul>
+                        </div>
+
+                        <!-- MESH NETWORK Card -->
+                        <div class="pricing-card">
+                            <h3 class="pricing-card__title">MESH NETWORK</h3>
+                            <div class="pricing-card__price">S/29.90</div>
+                            <div class="pricing-card__period">PER MONTH</div>
+
+                            <p class="pricing-card__desc">
+                                For comprehensive spatial monitoring.
+                            </p>
+                            <hr class="pricing-card__divider" />
+
+                            <ul class="pricing-card__features">
+                                <li>Support for 2+ Clair Alpha devices</li>
+                                <li>Unified multi-room dashboard</li>
+                                <li>Advanced historical data and analytics</li>
+                                <li>Centralized sensor management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Scale Section -->
+            <section class="section section--scale" id="scale">
+                <div class="container text-center">
+                    <h2 class="scale-title">Scale Your Intelligence.</h2>
+                    <p class="scale-subtitle">
+                        Whether you are securing a single private office or
+                        mapping the air quality of an entire architectural
+                        floorplan, the Clair platform adapts to your scale.
+                        Start with one, expand when ready.
                     </p>
-                    <div class="cta__buttons">
-                        <a class="btn btn--outline" href="pricing.html">Order Now</a>
-                        <a class="btn btn--ghost" href="product.html">View Product</a>
-                    </div>
                 </div>
-
-                <div class="cta__product">
-                    <img src="assets/sensor-last.avif" alt="Clair Alpha Sensor" class="cta__image" />
+                <div class="scale-image-wrapper">
+                    <img
+                        src="assets/pricing.png"
+                        alt="Office environment with Clair Alpha Sensor"
+                        class="scale-image"
+                    />
                 </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container footer__inner">
+                <small>Clair © 2026</small>
+                <ul class="footer__links" role="list" aria-label="Enlaces">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-        </section>
-
-        <!-- Subscriptions / Pricing Cards -->
-        <section class="section section--dark" id="subscriptions">
-            <div class="container">
-                <div class="pricing-header">
-                    <h2>Subscriptions</h2>
-                    <p>Advanced spectral analysis providing real-time visibility into your surrounding air quality with
-                        laboratory-grade precision.</p>
-                </div>
-
-                <div class="pricing-cards">
-                    <!-- FREE Card -->
-                    <div class="pricing-card">
-                        <h3 class="pricing-card__title">FREE</h3>
-                        <div class="pricing-card__price">S/0</div>
-                        <div class="pricing-card__period">PER MONTH</div>
-
-                        <p class="pricing-card__desc">Included with your first Clair Alpha.</p>
-                        <hr class="pricing-card__divider" />
-
-                        <ul class="pricing-card__features">
-                            <li>Support for 1 Clair Alpha device</li>
-                            <li>Real-time CO2 and particulate matter tracking</li>
-                            <li>Live environmental dashboard access</li>
-                        </ul>
-                    </div>
-
-                    <!-- MESH NETWORK Card -->
-                    <div class="pricing-card">
-                        <h3 class="pricing-card__title">MESH NETWORK</h3>
-                        <div class="pricing-card__price">S/99.90</div>
-                        <div class="pricing-card__period">PER MONTH</div>
-
-                        <p class="pricing-card__desc">For comprehensive spatial monitoring.</p>
-                        <hr class="pricing-card__divider" />
-
-                        <ul class="pricing-card__features">
-                            <li>Support for 2+ Clair Alpha devices</li>
-                            <li>Unified multi-room dashboard</li>
-                            <li>Advanced historical data and analytics</li>
-                            <li>Centralized sensor management</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Scale Section -->
-        <section class="section section--scale" id="scale">
-            <div class="container text-center">
-
-                <h2 class="scale-title">Scale Your Intelligence.</h2>
-                <p class="scale-subtitle">Whether you are securing a single private office or mapping the air quality of
-                    an entire architectural floorplan, the Clair platform adapts to your scale. Start with one, expand
-                    when ready.</p>
-            </div>
-            <div class="scale-image-wrapper">
-                <img src="assets/pricing.png" alt="Office environment with Clair Alpha Sensor" class="scale-image" />
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container footer__inner">
-            <small>Clair © 2026</small>
-            <ul class="footer__links" role="list" aria-label="Enlaces">
-                <li><a href="about.html">About</a></li>
-                <li><a href="product.html">Product</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </footer>
-    <script src="menu.js"></script>
-</body>
-
+        </footer>
+        <script src="menu.js"></script>
+    </body>
 </html>
