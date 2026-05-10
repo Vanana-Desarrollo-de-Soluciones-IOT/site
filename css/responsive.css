@@ -1,0 +1,34 @@
+@media (max-width: 880px) {
+    .metrics {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+    .specs {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        align-items: center;
+    }
+
+    .spec {
+        text-align: center;
+        align-items: center;
+    }
+
+    .cta {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .cta__product {
+        order: -1;
+    }
+
+    .split-media {
+        height: 360px;
+    }
+
+    .wall-device {
+        right: 10%;
+        width: 150px;
+    }
+}

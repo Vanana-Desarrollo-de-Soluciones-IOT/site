@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clair</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container" data-i18n-aria="nav.aria_nav" aria-label="Main">
+        <a class="brand" href="index.html">
+          <img src="assets/clair.svg" alt="Clair Logo" class="brand__logo" />
+          <span class="sr-only">Clair</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <ul class="nav__links-desktop" role="list">
+          <li><a href="about.html" data-i18n="page.about">About</a></li>
+          <li><a href="product.html" data-i18n="page.product">Product</a></li>
+          <li><a href="pricing.html" data-i18n="page.pricing">Pricing</a></li>
+        </ul>
+
+        <div class="nav__actions-desktop">
+          <button
+            class="icon-btn lang-toggle-desktop"
+            type="button"
+            data-i18n-aria="nav.aria_lang"
+            aria-label="Select language"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
+            <i data-lucide="globe" class="icon"></i>
+          </button>
+          <button
+            class="icon-btn"
+            type="button"
+            data-i18n-aria="nav.aria_account"
+            aria-label="Account"
+          >
+            <i data-lucide="circle-user" class="icon"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          data-i18n-aria="nav.open_menu"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <i data-lucide="menu" class="icon"></i>
+        </button>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="nav__menu" id="navMenu">
+          <div class="nav__menu-inner">
+            <ul class="nav__links-mobile" role="list">
+              <li><a href="about.html" class="menu-link" data-i18n="page.about">About</a></li>
+              <li><a href="product.html" class="menu-link" data-i18n="page.product">Product</a></li>
+              <li><a href="pricing.html" class="menu-link" data-i18n="page.pricing">Pricing</a></li>
+            </ul>
+
+            <div class="nav__actions-mobile">
+              <button class="icon-btn-labeled lang-toggle-mobile" type="button">
+                <i data-lucide="globe" class="icon"></i>
+                <span data-i18n="nav.language">Language</span>
+              </button>
+              <button class="icon-btn-labeled" type="button">
+                <i data-lucide="circle-user" class="icon"></i>
+                <span data-i18n="nav.account">Account</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- PRODUCT HERO -->
+      <section class="hero__product" id="product">
+        <div class="hero__content container">
+          <h1 class="kicker" data-i18n="product.hero_title">Meet Clair Alpha</h1>
+          <img
+            src="assets/sensor.svg"
+            data-i18n-alt="product.sensor_alt"
+            alt="Clair Alpha Sensor"
+            class="hero__image"
+          />
+        </div>
+      </section>
+
+      <!-- AIR INDEX QUALITY -->
+      <section class="section section--dark" id="about">
+        <div class="container">
+            <div class="container">
+                <header class="split__header">
+                    <h2 data-i18n="product.aiq_title">Air Index Quality</h2>
+                    <p data-i18n="product.aiq_desc">
+                        Clair Alpha continuously maps the invisible elements of your environment, it synthesizes a comprehensive Air Quality Index.
+                    </p>
+                </header>
+            </div>
+            <div class="split-media" aria-hidden="true">
+                <img src="assets/gym.png" alt="Clair Banner" style="width:100%;height:100%;object-fit:cover;" />
+            </div>
+
+            <div class="container">
+            <div class="specs" role="list" data-i18n-aria="product.specs_label" aria-label="Specifications">
+                <article class="spec" role="listitem">
+                    <header class="spec__section__header">
+                        <h3 data-i18n="product.specs_header">Clair Specs</h3>
+                    </header>
+                </article>
+            </div>
+        </div>
+
+        <div class="container">
+          <div class="specs" role="list">
+            <article class="spec" role="listitem">
+              <div class="spec__label" data-i18n="product.core_label">Core Processing</div>
+              <div class="spec__desc" data-i18n="product.core_desc">Powered by an advanced ESP32 architecture. This serves as the central intelligence hub, instantly processing multi-sensor data and ensuring seamless Wi-Fi transmission to your network.</div>
+            </article>
+
+            <article class="spec" role="listitem">
+              <div class="spec__label" data-i18n="product.atm_label">Atmospheric Sensing</div>
+              <div class="spec__desc" data-i18n="product.atm_desc">Equipped with an SCD41 module for simultaneous, laboratory-grade monitoring. It tracks CO2 saturation, ambient temperature, and relative humidity with absolute precision.</div>
+            </article>
+
+            <article class="spec" role="listitem">
+              <div class="spec__label" data-i18n="product.laser_label">Laser Particle Detection</div>
+              <div class="spec__desc" data-i18n="product.laser_desc">Utilizes a high-precision PMS5003 laser sensor to continuously measure ultra-fine particulate matter, actively tracking both PM2.5 and PM10 pollutants down to the sub-micron level.</div>
+            </article>
+
+            <article class="spec" role="listitem">
+              <div class="spec__label" data-i18n="product.oled_label">Unobtrusive Interface</div>
+              <div class="spec__desc" data-i18n="product.oled_desc">Features a minimalist high-contrast OLED display. Designed for zero distraction, it provides immediate, app-free visibility of critical metrics without compromising the device's sharp, pure silhouette.</div>
+            </article>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- CTA -->
+      <section class="section section--dark section--cta" id="pricing">
+        <div class="container cta">
+          <div class="cta__copy">
+            <h2 data-i18n="cta.title">Clean your air</h2>
+            <p data-i18n="cta.desc">
+              Take absolute control of your indoor environment. Precise, real-time tracking for CO2, particulate
+              matter, temperature, and humidity.
+            </p>
+            <div class="cta__buttons">
+              <a class="btn btn--outline" href="pricing.html" data-i18n="cta.order">Order Now</a>
+              <a class="btn btn--ghost" href="product.html" data-i18n="cta.view">View Product</a>
+            </div>
+          </div>
+
+          <div class="cta__product">
+            <img src="assets/sensor-last.avif" alt="Clair Alpha Sensor" class="cta__image" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <small>Clair © 2026</small>
+        <ul class="footer__links" role="list" data-i18n-aria="footer.links_label" aria-label="Links">
+          <li><a href="about.html" data-i18n="page.about">About</a></li>
+          <li><a href="product.html" data-i18n="page.product">Product</a></li>
+          <li><a href="pricing.html" data-i18n="page.pricing">Pricing</a></li>
+          <li><a href="privacy.html" data-i18n="page.privacy">Privacy</a></li>
+          <li><a href="contact.html" data-i18n="page.contact">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="menu.js"></script>
+    <script src="i18n.js"></script>
+  </body>
+</html>
