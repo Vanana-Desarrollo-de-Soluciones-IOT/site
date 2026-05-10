@@ -114,7 +114,7 @@
     </head>
     <body>
         <header class="header">
-            <nav class="nav container" aria-label="Main">
+            <nav class="nav container" data-i18n-aria="nav.aria_nav" aria-label="Main">
                 <a class="brand" href="index.html">
                     <img
                         src="assets/clair.svg"
@@ -125,20 +125,28 @@
                 </a>
 
                 <ul class="nav__links-desktop" role="list">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="product.html">Product</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="about.html" data-i18n="page.about">About</a></li>
+                    <li><a href="product.html" data-i18n="page.product">Product</a></li>
+                    <li><a href="pricing.html" data-i18n="page.pricing">Pricing</a></li>
                 </ul>
 
                 <div class="nav__actions-desktop">
                     <button
-                        class="icon-btn"
+                        class="icon-btn lang-toggle-desktop"
                         type="button"
-                        aria-label="Language"
+                        data-i18n-aria="nav.aria_lang"
+                        aria-label="Select language"
+                        aria-expanded="false"
+                        aria-haspopup="true"
                     >
                         <i data-lucide="globe" class="icon"></i>
                     </button>
-                    <button class="icon-btn" type="button" aria-label="Account">
+                    <button
+                        class="icon-btn"
+                        type="button"
+                        data-i18n-aria="nav.aria_account"
+                        aria-label="Account"
+                    >
                         <i data-lucide="circle-user" class="icon"></i>
                     </button>
                 </div>
@@ -146,6 +154,7 @@
                 <button
                     class="menu-toggle"
                     id="menuToggle"
+                    data-i18n-aria="nav.open_menu"
                     aria-label="Open menu"
                     aria-expanded="false"
                 >
@@ -157,28 +166,24 @@
                     <div class="nav__menu-inner">
                         <ul class="nav__links-mobile" role="list">
                             <li>
-                                <a href="about.html" class="menu-link">About</a>
+                                <a href="about.html" class="menu-link" data-i18n="page.about">About</a>
                             </li>
                             <li>
-                                <a href="product.html" class="menu-link"
-                                    >Product</a
-                                >
+                                <a href="product.html" class="menu-link" data-i18n="page.product">Product</a>
                             </li>
                             <li>
-                                <a href="pricing.html" class="menu-link"
-                                    >Pricing</a
-                                >
+                                <a href="pricing.html" class="menu-link" data-i18n="page.pricing">Pricing</a>
                             </li>
                         </ul>
 
                         <div class="nav__actions-mobile">
-                            <button class="icon-btn-labeled" type="button">
+                            <button class="icon-btn-labeled lang-toggle-mobile" type="button">
                                 <i data-lucide="globe" class="icon"></i>
-                                <span>Language</span>
+                                <span data-i18n="nav.language">Language</span>
                             </button>
                             <button class="icon-btn-labeled" type="button">
                                 <i data-lucide="circle-user" class="icon"></i>
-                                <span>Account</span>
+                                <span data-i18n="nav.account">Account</span>
                             </button>
                         </div>
                     </div>
@@ -190,16 +195,16 @@
             <section class="legal-hero">
                 <div class="container legal-container">
                     <div>
-                        <h1 class="legal-title">Legal & Privacy</h1>
-                        <p class="legal-lead">
+                        <h1 class="legal-title" data-i18n="privacy.title">Legal & Privacy</h1>
+                        <p class="legal-lead" data-i18n="privacy.lead">
                             This page summarizes Clair's legal notices, privacy
                             practices and policies. Use the links on the right
                             to jump to specific documents and resources.
                         </p>
 
                         <article class="legal-section" id="privacy">
-                            <h2>Privacy Policy</h2>
-                            <p>
+                            <h2 data-i18n="privacy.policy_title">Privacy Policy</h2>
+                            <p data-i18n="privacy.policy_text">
                                 We collect and process data to provide and
                                 improve our products and services. We are
                                 committed to protecting your personal
@@ -210,8 +215,8 @@
                         </article>
 
                         <article class="legal-section" id="terms">
-                            <h2>Terms of Use</h2>
-                            <p>
+                            <h2 data-i18n="privacy.terms_title">Terms of Use</h2>
+                            <p data-i18n="privacy.terms_text">
                                 These terms govern your access to and use of
                                 Clair products and websites. By using our
                                 services you agree to these terms. Please review
@@ -220,8 +225,8 @@
                         </article>
 
                         <article class="legal-section" id="cookies">
-                            <h2>Cookies & Tracking</h2>
-                            <p>
+                            <h2 data-i18n="privacy.cookies_title">Cookies & Tracking</h2>
+                            <p data-i18n="privacy.cookies_text">
                                 We use cookies and similar technologies to
                                 ensure the site works correctly and to
                                 personalize content. You can control cookie
@@ -230,8 +235,8 @@
                         </article>
 
                         <article class="legal-section" id="data-processing">
-                            <h2>Data Processing</h2>
-                            <p>
+                            <h2 data-i18n="privacy.data_title">Data Processing</h2>
+                            <p data-i18n="privacy.data_text">
                                 Information about how we process personal data
                                 for product functionality, analytics and service
                                 delivery. Businesses can request data processing
@@ -240,8 +245,8 @@
                         </article>
 
                         <article class="legal-section" id="security">
-                            <h2>Security</h2>
-                            <p>
+                            <h2 data-i18n="privacy.security_title">Security</h2>
+                            <p data-i18n="privacy.security_text">
                                 We implement reasonable administrative,
                                 technical, and physical safeguards to protect
                                 personal information. No system can be 100%
@@ -251,8 +256,8 @@
                         </article>
 
                         <article class="legal-section" id="contact-legal">
-                            <h2>Contact</h2>
-                            <p>
+                            <h2 data-i18n="privacy.contact_title">Contact</h2>
+                            <p data-i18n-html="privacy.contact_text">
                                 If you have legal or privacy questions, email
                                 <a href="mailto:privacy&#64;clair.com"
                                     >privacy&#64;clair.com</a
@@ -263,26 +268,20 @@
                     </div>
 
                     <aside class="legal-sidebar">
-                        <nav aria-label="Legal quick links">
+                        <nav data-i18n-aria="privacy.nav_label" aria-label="Legal quick links">
                             <ul class="legal-links">
-                                <li><a href="#privacy">Privacy Policy</a></li>
-                                <li><a href="#terms">Terms of Use</a></li>
-                                <li>
-                                    <a href="#cookies">Cookies & Tracking</a>
-                                </li>
-                                <li>
-                                    <a href="#data-processing"
-                                        >Data Processing</a
-                                    >
-                                </li>
-                                <li><a href="#security">Security</a></li>
-                                <li><a href="#contact-legal">Contact</a></li>
-                                <li><a href="contact.html">Contact Page</a></li>
+                                <li><a href="#privacy" data-i18n="privacy.sidebar_policy">Privacy Policy</a></li>
+                                <li><a href="#terms" data-i18n="privacy.sidebar_terms">Terms of Use</a></li>
+                                <li><a href="#cookies" data-i18n="privacy.sidebar_cookies">Cookies & Tracking</a></li>
+                                <li><a href="#data-processing" data-i18n="privacy.sidebar_data">Data Processing</a></li>
+                                <li><a href="#security" data-i18n="privacy.sidebar_security">Security</a></li>
+                                <li><a href="#contact-legal" data-i18n="privacy.sidebar_contact">Contact</a></li>
+                                <li><a href="contact.html" data-i18n="privacy.sidebar_contact_page">Contact Page</a></li>
                             </ul>
                         </nav>
 
                         <div class="legal-footer-note">
-                            <small>Last updated: May 2026</small>
+                            <small data-i18n="privacy.last_updated">Last updated: May 2026</small>
                         </div>
                     </aside>
                 </div>
@@ -292,12 +291,12 @@
         <footer class="footer">
             <div class="container footer__inner">
                 <small>Clair © 2026</small>
-                <ul class="footer__links" role="list" aria-label="Links">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="product.html">Product</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="privacy.html">Privacy</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul class="footer__links" role="list" data-i18n-aria="footer.links_label" aria-label="Links">
+                    <li><a href="about.html" data-i18n="page.about">About</a></li>
+                    <li><a href="product.html" data-i18n="page.product">Product</a></li>
+                    <li><a href="pricing.html" data-i18n="page.pricing">Pricing</a></li>
+                    <li><a href="privacy.html" data-i18n="page.privacy">Privacy</a></li>
+                    <li><a href="contact.html" data-i18n="page.contact">Contact</a></li>
                 </ul>
             </div>
         </footer>

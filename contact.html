@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -258,7 +258,7 @@
     </head>
     <body>
         <header class="header">
-            <nav class="nav container" aria-label="Principal">
+            <nav class="nav container" data-i18n-aria="nav.aria_nav" aria-label="Main">
                 <a class="brand" href="index.html">
                     <img
                         src="assets/clair.svg"
@@ -270,20 +270,28 @@
 
                 <!-- Desktop Navigation -->
                 <ul class="nav__links-desktop" role="list">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="product.html">Product</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="about.html" data-i18n="page.about">About</a></li>
+                    <li><a href="product.html" data-i18n="page.product">Product</a></li>
+                    <li><a href="pricing.html" data-i18n="page.pricing">Pricing</a></li>
                 </ul>
 
                 <div class="nav__actions-desktop">
                     <button
-                        class="icon-btn"
+                        class="icon-btn lang-toggle-desktop"
                         type="button"
-                        aria-label="Language"
+                        data-i18n-aria="nav.aria_lang"
+                        aria-label="Select language"
+                        aria-expanded="false"
+                        aria-haspopup="true"
                     >
                         <i data-lucide="globe" class="icon"></i>
                     </button>
-                    <button class="icon-btn" type="button" aria-label="Account">
+                    <button
+                        class="icon-btn"
+                        type="button"
+                        data-i18n-aria="nav.aria_account"
+                        aria-label="Account"
+                    >
                         <i data-lucide="circle-user" class="icon"></i>
                     </button>
                 </div>
@@ -292,6 +300,7 @@
                 <button
                     class="menu-toggle"
                     id="menuToggle"
+                    data-i18n-aria="nav.open_menu"
                     aria-label="Open menu"
                     aria-expanded="false"
                 >
@@ -303,28 +312,24 @@
                     <div class="nav__menu-inner">
                         <ul class="nav__links-mobile" role="list">
                             <li>
-                                <a href="about.html" class="menu-link">About</a>
+                                <a href="about.html" class="menu-link" data-i18n="page.about">About</a>
                             </li>
                             <li>
-                                <a href="product.html" class="menu-link"
-                                    >Product</a
-                                >
+                                <a href="product.html" class="menu-link" data-i18n="page.product">Product</a>
                             </li>
                             <li>
-                                <a href="pricing.html" class="menu-link"
-                                    >Pricing</a
-                                >
+                                <a href="pricing.html" class="menu-link" data-i18n="page.pricing">Pricing</a>
                             </li>
                         </ul>
 
                         <div class="nav__actions-mobile">
-                            <button class="icon-btn-labeled" type="button">
+                            <button class="icon-btn-labeled lang-toggle-mobile" type="button">
                                 <i data-lucide="globe" class="icon"></i>
-                                <span>Language</span>
+                                <span data-i18n="nav.language">Language</span>
                             </button>
                             <button class="icon-btn-labeled" type="button">
                                 <i data-lucide="circle-user" class="icon"></i>
-                                <span>Account</span>
+                                <span data-i18n="nav.account">Account</span>
                             </button>
                         </div>
                     </div>
@@ -337,8 +342,8 @@
             <section class="section section--dark contact-section" id="contact">
                 <div class="container">
                     <div class="contact-header">
-                        <h1>Contact</h1>
-                        <p>
+                        <h1 data-i18n="contact.title">Contact</h1>
+                        <p data-i18n="contact.desc">
                             We're here to answer all your questions about Clair
                             and help you improve air quality in your space.
                         </p>
@@ -346,8 +351,8 @@
 
                     <div class="contact-content">
                         <div class="contact-section-group">
-                            <h2>Sales & Inquiries</h2>
-                            <p>
+                            <h2 data-i18n="contact.sales_title">Sales & Inquiries</h2>
+                            <p data-i18n="contact.sales_desc">
                                 Interested in getting a Clair Alpha? Our sales
                                 team is available to help you with product
                                 information, pricing, and delivery options.
@@ -359,7 +364,7 @@
                                         data-lucide="mail"
                                         class="contact-method-icon"
                                     ></i>
-                                    <h3>Email</h3>
+                                    <h3 data-i18n="contact.email_label">Email</h3>
                                     <p>
                                         <a href="mailto:sales&#64;clair.com"
                                             >sales&#64;clair.com</a
@@ -372,7 +377,7 @@
                                         data-lucide="phone"
                                         class="contact-method-icon"
                                     ></i>
-                                    <h3>Phone</h3>
+                                    <h3 data-i18n="contact.phone_label">Phone</h3>
                                     <p>
                                         <a href="tel:+51001234567"
                                             >+51 (0) 123 456 7</a
@@ -385,8 +390,8 @@
                                         data-lucide="clock"
                                         class="contact-method-icon"
                                     ></i>
-                                    <h3>Availability</h3>
-                                    <p>
+                                    <h3 data-i18n="contact.avail_label">Availability</h3>
+                                    <p data-i18n-html="contact.avail_text">
                                         Mon - Fri, 9am - 6pm<br />Peru Time
                                         (UTC-5)
                                     </p>
@@ -395,8 +400,8 @@
                         </div>
 
                         <div class="contact-section-group">
-                            <h2>Technical Support</h2>
-                            <p>
+                            <h2 data-i18n="contact.support_title">Technical Support</h2>
+                            <p data-i18n="contact.support_desc">
                                 Having technical issues or questions about how
                                 to use your Clair? Our support team is ready to
                                 help you resolve any inconvenience.
@@ -408,7 +413,7 @@
                                         data-lucide="mail"
                                         class="contact-method-icon"
                                     ></i>
-                                    <h3>Support Email</h3>
+                                    <h3 data-i18n="contact.support_email_label">Support Email</h3>
                                     <p>
                                         <a href="mailto:support&#64;clair.com"
                                             >support&#64;clair.com</a
@@ -421,8 +426,8 @@
                                         data-lucide="help-circle"
                                         class="contact-method-icon"
                                     ></i>
-                                    <h3>Help Center</h3>
-                                    <p>
+                                    <h3 data-i18n="contact.help_label">Help Center</h3>
+                                    <p data-i18n="contact.help_text">
                                         Documentation, FAQs and user guides
                                         available 24/7
                                     </p>
@@ -433,8 +438,8 @@
                                         data-lucide="map-pin"
                                         class="contact-method-icon"
                                     ></i>
-                                    <h3>Location</h3>
-                                    <p>Lima, Peru</p>
+                                    <h3 data-i18n="contact.location_label">Location</h3>
+                                    <p data-i18n="contact.location_text">Lima, Peru</p>
                                 </div>
                             </div>
                         </div>
@@ -442,8 +447,8 @@
 
                     <!-- Headquarters Subsection -->
                     <div class="contact-section-group">
-                        <h2>Our Headquarters</h2>
-                        <p>
+                        <h2 data-i18n="contact.hq_title">Our Headquarters</h2>
+                        <p data-i18n="contact.hq_desc">
                             Visit us at our offices in San Isidro, where our
                             team is ready to help you.
                         </p>
@@ -464,12 +469,12 @@
         <footer class="footer">
             <div class="container footer__inner">
                 <small>Clair © 2026</small>
-                <ul class="footer__links" role="list" aria-label="Links">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="product.html">Product</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="privacy.html">Privacy</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul class="footer__links" role="list" data-i18n-aria="footer.links_label" aria-label="Links">
+                    <li><a href="about.html" data-i18n="page.about">About</a></li>
+                    <li><a href="product.html" data-i18n="page.product">Product</a></li>
+                    <li><a href="pricing.html" data-i18n="page.pricing">Pricing</a></li>
+                    <li><a href="privacy.html" data-i18n="page.privacy">Privacy</a></li>
+                    <li><a href="contact.html" data-i18n="page.contact">Contact</a></li>
                 </ul>
             </div>
         </footer>

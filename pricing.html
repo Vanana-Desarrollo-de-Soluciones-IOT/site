@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
 
     <body>
         <header class="header">
-            <nav class="nav container" aria-label="Principal">
+            <nav class="nav container" data-i18n-aria="nav.aria_nav" aria-label="Main">
                 <a class="brand" href="index.html">
                     <img
                         src="assets/clair.svg"
@@ -27,59 +27,68 @@
                     <span class="sr-only">Clair</span>
                 </a>
 
-                <!-- Navegación de Escritorio -->
+                <!-- Desktop Navigation -->
                 <ul class="nav__links-desktop" role="list">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="product.html">Product</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="about.html" data-i18n="page.about">About</a></li>
+                    <li><a href="product.html" data-i18n="page.product">Product</a></li>
+                    <li><a href="pricing.html" data-i18n="page.pricing">Pricing</a></li>
                 </ul>
 
                 <div class="nav__actions-desktop">
-                    <button class="icon-btn" type="button" aria-label="Idioma">
+                    <button
+                        class="icon-btn lang-toggle-desktop"
+                        type="button"
+                        data-i18n-aria="nav.aria_lang"
+                        aria-label="Select language"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                    >
                         <i data-lucide="globe" class="icon"></i>
                     </button>
-                    <button class="icon-btn" type="button" aria-label="Cuenta">
+                    <button
+                        class="icon-btn"
+                        type="button"
+                        data-i18n-aria="nav.aria_account"
+                        aria-label="Account"
+                    >
                         <i data-lucide="circle-user" class="icon"></i>
                     </button>
                 </div>
 
-                <!-- Botón Menú (Móvil) -->
+                <!-- Mobile Menu Toggle -->
                 <button
                     class="menu-toggle"
                     id="menuToggle"
-                    aria-label="Abrir menú"
+                    data-i18n-aria="nav.open_menu"
+                    aria-label="Open menu"
                     aria-expanded="false"
                 >
                     <i data-lucide="menu" class="icon"></i>
                 </button>
 
-                <!-- Menú Overlay (Móvil) -->
+                <!-- Mobile Menu Overlay -->
                 <div class="nav__menu" id="navMenu">
                     <div class="nav__menu-inner">
                         <ul class="nav__links-mobile" role="list">
                             <li>
-                                <a href="about.html" class="menu-link">About</a>
+                                <a href="about.html" class="menu-link" data-i18n="page.about">About</a>
                             </li>
                             <li>
-                                <a href="product.html" class="menu-link"
-                                    >Product</a
-                                >
+                                <a href="product.html" class="menu-link" data-i18n="page.product">Product</a>
                             </li>
                             <li>
-                                <a href="pricing.html" class="menu-link"
-                                    >Pricing</a
-                                >
+                                <a href="pricing.html" class="menu-link" data-i18n="page.pricing">Pricing</a>
                             </li>
                         </ul>
 
                         <div class="nav__actions-mobile">
-                            <button class="icon-btn-labeled" type="button">
+                            <button class="icon-btn-labeled lang-toggle-mobile" type="button">
                                 <i data-lucide="globe" class="icon"></i>
-                                <span>Language</span>
+                                <span data-i18n="nav.language">Language</span>
                             </button>
                             <button class="icon-btn-labeled" type="button">
                                 <i data-lucide="circle-user" class="icon"></i>
-                                <span>Account</span>
+                                <span data-i18n="nav.account">Account</span>
                             </button>
                         </div>
                     </div>
@@ -93,14 +102,10 @@
                 <div class="container cta">
                     <div class="cta__copy">
                         <h1>Clair</h1>
-                        <p class="cta__price">From S/ 259.90</p>
+                        <p class="cta__price" data-i18n="pricing.hero_price">From S/ 259.90</p>
                         <div class="cta__buttons">
-                            <a class="btn btn--outline" href="pricing.html"
-                                >Order Now</a
-                            >
-                            <a class="btn btn--ghost" href="product.html"
-                                >View Product</a
-                            >
+                            <a class="btn btn--outline" href="pricing.html" data-i18n="pricing.order">Order Now</a>
+                            <a class="btn btn--ghost" href="product.html" data-i18n="pricing.view">View Product</a>
                         </div>
                     </div>
 
@@ -118,8 +123,8 @@
             <section class="section section--dark" id="subscriptions">
                 <div class="container">
                     <div class="pricing-header">
-                        <h2>Subscriptions</h2>
-                        <p>
+                        <h2 data-i18n="pricing.subs_title">Subscriptions</h2>
+                        <p data-i18n="pricing.subs_desc">
                             Advanced spectral analysis providing real-time
                             visibility into your surrounding air quality with
                             laboratory-grade precision.
@@ -129,41 +134,38 @@
                     <div class="pricing-cards">
                         <!-- FREE Card -->
                         <div class="pricing-card">
-                            <h3 class="pricing-card__title">FREE</h3>
+                            <h3 class="pricing-card__title" data-i18n="pricing.free_title">FREE</h3>
                             <div class="pricing-card__price">S/0</div>
-                            <div class="pricing-card__period">PER MONTH</div>
+                            <div class="pricing-card__period" data-i18n="pricing.free_period">PER MONTH</div>
 
-                            <p class="pricing-card__desc">
+                            <p class="pricing-card__desc" data-i18n="pricing.free_desc">
                                 Included with your first Clair Alpha.
                             </p>
                             <hr class="pricing-card__divider" />
 
                             <ul class="pricing-card__features">
-                                <li>Support for 1 Clair Alpha device</li>
-                                <li>
-                                    Real-time CO2 and particulate matter
-                                    tracking
-                                </li>
-                                <li>Live environmental dashboard access</li>
+                                <li data-i18n="pricing.free_feat1">Support for 1 Clair Alpha device</li>
+                                <li data-i18n="pricing.free_feat2">Real-time CO2 and particulate matter tracking</li>
+                                <li data-i18n="pricing.free_feat3">Live environmental dashboard access</li>
                             </ul>
                         </div>
 
                         <!-- MESH NETWORK Card -->
                         <div class="pricing-card">
-                            <h3 class="pricing-card__title">MESH NETWORK</h3>
+                            <h3 class="pricing-card__title" data-i18n="pricing.mesh_title">MESH NETWORK</h3>
                             <div class="pricing-card__price">S/29.90</div>
-                            <div class="pricing-card__period">PER MONTH</div>
+                            <div class="pricing-card__period" data-i18n="pricing.mesh_period">PER MONTH</div>
 
-                            <p class="pricing-card__desc">
+                            <p class="pricing-card__desc" data-i18n="pricing.mesh_desc">
                                 For comprehensive spatial monitoring.
                             </p>
                             <hr class="pricing-card__divider" />
 
                             <ul class="pricing-card__features">
-                                <li>Support for 2+ Clair Alpha devices</li>
-                                <li>Unified multi-room dashboard</li>
-                                <li>Advanced historical data and analytics</li>
-                                <li>Centralized sensor management</li>
+                                <li data-i18n="pricing.mesh_feat1">Support for 2+ Clair Alpha devices</li>
+                                <li data-i18n="pricing.mesh_feat2">Unified multi-room dashboard</li>
+                                <li data-i18n="pricing.mesh_feat3">Advanced historical data and analytics</li>
+                                <li data-i18n="pricing.mesh_feat4">Centralized sensor management</li>
                             </ul>
                         </div>
                     </div>
@@ -173,8 +175,8 @@
             <!-- Scale Section -->
             <section class="section section--scale" id="scale">
                 <div class="container text-center">
-                    <h2 class="scale-title">Scale Your Intelligence.</h2>
-                    <p class="scale-subtitle">
+                    <h2 class="scale-title" data-i18n="pricing.scale_title">Scale Your Intelligence.</h2>
+                    <p class="scale-subtitle" data-i18n="pricing.scale_desc">
                         Whether you are securing a single private office or
                         mapping the air quality of an entire architectural
                         floorplan, the Clair platform adapts to your scale.
@@ -184,6 +186,7 @@
                 <div class="scale-image-wrapper">
                     <img
                         src="assets/pricing.png"
+                        data-i18n-alt="pricing.scale_img_alt"
                         alt="Office environment with Clair Alpha Sensor"
                         class="scale-image"
                     />
@@ -194,12 +197,12 @@
         <footer class="footer">
             <div class="container footer__inner">
                 <small>Clair © 2026</small>
-                <ul class="footer__links" role="list" aria-label="Enlaces">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="product.html">Product</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="privacy.html">Privacy</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul class="footer__links" role="list" data-i18n-aria="footer.links_label" aria-label="Links">
+                    <li><a href="about.html" data-i18n="page.about">About</a></li>
+                    <li><a href="product.html" data-i18n="page.product">Product</a></li>
+                    <li><a href="pricing.html" data-i18n="page.pricing">Pricing</a></li>
+                    <li><a href="privacy.html" data-i18n="page.privacy">Privacy</a></li>
+                    <li><a href="contact.html" data-i18n="page.contact">Contact</a></li>
                 </ul>
             </div>
         </footer>
