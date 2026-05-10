@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +17,7 @@
 
     <body>
         <header class="header">
-            <nav class="nav container" aria-label="Principal">
+            <nav class="nav container" data-i18n-aria="nav.aria_nav" aria-label="Main">
                 <a class="brand" href="index.html">
                     <img
                         src="assets/clair.svg"
@@ -27,59 +27,68 @@
                     <span class="sr-only">Clair</span>
                 </a>
 
-                <!-- Navegación de Escritorio -->
+                <!-- Desktop Navigation -->
                 <ul class="nav__links-desktop" role="list">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="product.html">Product</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="about.html" data-i18n="page.about">About</a></li>
+                    <li><a href="product.html" data-i18n="page.product">Product</a></li>
+                    <li><a href="pricing.html" data-i18n="page.pricing">Pricing</a></li>
                 </ul>
 
                 <div class="nav__actions-desktop">
-                    <button class="icon-btn" type="button" aria-label="Idioma">
+                    <button
+                        class="icon-btn lang-toggle-desktop"
+                        type="button"
+                        data-i18n-aria="nav.aria_lang"
+                        aria-label="Select language"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                    >
                         <i data-lucide="globe" class="icon"></i>
                     </button>
-                    <button class="icon-btn" type="button" aria-label="Cuenta">
+                    <button
+                        class="icon-btn"
+                        type="button"
+                        data-i18n-aria="nav.aria_account"
+                        aria-label="Account"
+                    >
                         <i data-lucide="circle-user" class="icon"></i>
                     </button>
                 </div>
 
-                <!-- Botón Menú (Móvil) -->
+                <!-- Mobile Menu Toggle -->
                 <button
                     class="menu-toggle"
                     id="menuToggle"
-                    aria-label="Abrir menú"
+                    data-i18n-aria="nav.open_menu"
+                    aria-label="Open menu"
                     aria-expanded="false"
                 >
                     <i data-lucide="menu" class="icon"></i>
                 </button>
 
-                <!-- Menú Overlay (Móvil) -->
+                <!-- Mobile Menu Overlay -->
                 <div class="nav__menu" id="navMenu">
                     <div class="nav__menu-inner">
                         <ul class="nav__links-mobile" role="list">
                             <li>
-                                <a href="about.html" class="menu-link">About</a>
+                                <a href="about.html" class="menu-link" data-i18n="page.about">About</a>
                             </li>
                             <li>
-                                <a href="product.html" class="menu-link"
-                                    >Product</a
-                                >
+                                <a href="product.html" class="menu-link" data-i18n="page.product">Product</a>
                             </li>
                             <li>
-                                <a href="pricing.html" class="menu-link"
-                                    >Pricing</a
-                                >
+                                <a href="pricing.html" class="menu-link" data-i18n="page.pricing">Pricing</a>
                             </li>
                         </ul>
 
                         <div class="nav__actions-mobile">
-                            <button class="icon-btn-labeled" type="button">
+                            <button class="icon-btn-labeled lang-toggle-mobile" type="button">
                                 <i data-lucide="globe" class="icon"></i>
-                                <span>Language</span>
+                                <span data-i18n="nav.language">Language</span>
                             </button>
                             <button class="icon-btn-labeled" type="button">
                                 <i data-lucide="circle-user" class="icon"></i>
-                                <span>Account</span>
+                                <span data-i18n="nav.account">Account</span>
                             </button>
                         </div>
                     </div>
@@ -98,19 +107,16 @@
 
                 <div class="hero__content container">
                     <h1 class="kicker">Clair Alpha</h1>
-                    <p class="subkicker">From S/ 259.90</p>
+                    <p class="subkicker" data-i18n="index.hero_price">From S/ 259.90</p>
 
                     <div class="hero__cta">
-                        <a class="btn btn--primary" href="pricing.html"
-                            >Order Now</a
-                        >
-                        <a class="btn btn--ghost" href="product.html"
-                            >View Product</a
-                        >
+                        <a class="btn btn--primary" href="pricing.html" data-i18n="cta.order">Order Now</a>
+                        <a class="btn btn--ghost" href="product.html" data-i18n="cta.view">View Product</a>
                     </div>
 
                     <img
                         src="assets/sensor.svg"
+                        data-i18n-alt="index.hero_sensor_alt"
                         alt="Clair Alpha Sensor"
                         class="hero__image"
                     />
@@ -121,26 +127,26 @@
             <section class="section section--dark" id="about">
                 <div class="container">
                     <header class="section__header">
-                        <h2>Sensory Intelligence</h2>
-                        <p>
+                        <h2 data-i18n="index.sensory_title">Sensory Intelligence</h2>
+                        <p data-i18n="index.sensory_desc">
                             Advanced spectral analysis providing real-time
                             visibility into your surrounding air quality with
                             laboratory-grade precision.
                         </p>
                     </header>
 
-                    <div class="metrics" role="list" aria-label="Métricas">
+                    <div class="metrics" role="list" data-i18n-aria="index.metrics_label" aria-label="Metrics">
                         <article class="metric" role="listitem">
                             <div class="metric__dial metric__dial--blue">
                                 <div class="metric__value">1.2</div>
                                 <div class="metric__unit">MG/M³</div>
                             </div>
                             <div class="metric__label">PM2.5</div>
-                            <div class="metric__desc">
+                            <div class="metric__desc" data-i18n="index.pm25_desc">
                                 Particulate matter detection.
                             </div>
                             <div class="metric__divider"></div>
-                            <div class="metric__tag">OPTIMAL PURITY</div>
+                            <div class="metric__tag" data-i18n="index.pm25_tag">OPTIMAL PURITY</div>
                         </article>
 
                         <article class="metric" role="listitem">
@@ -154,17 +160,15 @@
                                     <div class="metric__meter-line"></div>
                                 </div>
                                 <div class="metric__meter-pill">
-                                    <span class="metric__value-inline"
-                                        >20.9%</span
-                                    >
+                                    <span class="metric__value-inline">20.9%</span>
                                 </div>
                             </div>
                             <div class="metric__label">CO2</div>
-                            <div class="metric__desc">
+                            <div class="metric__desc" data-i18n="index.co2_desc">
                                 CO2 saturation monitoring.
                             </div>
                             <div class="metric__divider"></div>
-                            <div class="metric__tag">ATMOSPHERIC NORM</div>
+                            <div class="metric__tag" data-i18n="index.co2_tag">ATMOSPHERIC NORM</div>
                         </article>
 
                         <article class="metric" role="listitem">
@@ -172,25 +176,26 @@
                                 <div class="metric__value">98</div>
                                 <div class="metric__unit">SCORE</div>
                             </div>
-                            <div class="metric__label">Clean Air Index</div>
-                            <div class="metric__desc">
+                            <div class="metric__label" data-i18n="index.cai_label">Clean Air Index</div>
+                            <div class="metric__desc" data-i18n="index.cai_desc">
                                 Holistic calculation of overall air quality.
                             </div>
                             <div class="metric__divider"></div>
-                            <div class="metric__tag">PRISTINE AIR</div>
+                            <div class="metric__tag" data-i18n="index.cai_tag">PRISTINE AIR</div>
                         </article>
                     </div>
                 </div>
             </section>
 
-            <!-- OFFICE (PLACEHOLDER) -->
+            <!-- INVISIBLE PROTECTION -->
             <section
                 class="section section--dark section--split"
+                data-i18n-aria="index.invisible_title"
                 aria-label="Invisible Protection"
             >
                 <div class="container text-center">
-                    <h2 class="scale-title">Invisible Protection</h2>
-                    <p class="scale-subtitle">
+                    <h2 class="scale-title" data-i18n="index.invisible_title">Invisible Protection</h2>
+                    <p class="scale-subtitle" data-i18n="index.invisible_desc">
                         Engineered to blend effortlessly into modern spaces,
                         Clair features a minimalist industrial design with sharp
                         angles and an absence of distracting screens, providing
@@ -201,6 +206,7 @@
                 <div class="scale-image-wrapper">
                     <img
                         src="assets/pricing.png"
+                        data-i18n-alt="index.office_alt"
                         alt="Office environment with Clair Alpha Sensor"
                         class="scale-image"
                     />
@@ -211,19 +217,15 @@
             <section class="section section--dark section--cta" id="pricing">
                 <div class="container cta">
                     <div class="cta__copy">
-                        <h2>Clean your air</h2>
-                        <p>
+                        <h2 data-i18n="cta.title">Clean your air</h2>
+                        <p data-i18n="cta.desc">
                             Take absolute control of your indoor environment.
                             Precise, real-time tracking for CO2, particulate
                             matter, temperature, and humidity.
                         </p>
                         <div class="cta__buttons">
-                            <a class="btn btn--outline" href="pricing.html"
-                                >Order Now</a
-                            >
-                            <a class="btn btn--ghost" href="product.html"
-                                >View Product</a
-                            >
+                            <a class="btn btn--outline" href="pricing.html" data-i18n="cta.order">Order Now</a>
+                            <a class="btn btn--ghost" href="product.html" data-i18n="cta.view">View Product</a>
                         </div>
                     </div>
 
@@ -241,15 +243,16 @@
         <footer class="footer">
             <div class="container footer__inner">
                 <small>Clair © 2026</small>
-                <ul class="footer__links" role="list" aria-label="Enlaces">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="product.html">Product</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="privacy.html">Privacy</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul class="footer__links" role="list" data-i18n-aria="footer.links_label" aria-label="Links">
+                    <li><a href="about.html" data-i18n="page.about">About</a></li>
+                    <li><a href="product.html" data-i18n="page.product">Product</a></li>
+                    <li><a href="pricing.html" data-i18n="page.pricing">Pricing</a></li>
+                    <li><a href="privacy.html" data-i18n="page.privacy">Privacy</a></li>
+                    <li><a href="contact.html" data-i18n="page.contact">Contact</a></li>
                 </ul>
             </div>
         </footer>
         <script src="menu.js"></script>
+        <script src="i18n.js"></script>
     </body>
 </html>
