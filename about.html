@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,50 +16,68 @@
   </head>
   <body>
     <header class="header">
-      <nav class="nav container" aria-label="Principal">
+      <nav class="nav container" data-i18n-aria="nav.aria_nav" aria-label="Main">
         <a class="brand" href="index.html">
           <img src="assets/clair.svg" alt="Clair Logo" class="brand__logo" />
           <span class="sr-only">Clair</span>
         </a>
 
-        <!-- Navegación de Escritorio -->
+        <!-- Desktop Navigation -->
         <ul class="nav__links-desktop" role="list">
-          <li><a href="about.html">About</a></li>
-          <li><a href="product.html">Product</a></li>          
-          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="about.html" data-i18n="page.about">About</a></li>
+          <li><a href="product.html" data-i18n="page.product">Product</a></li>
+          <li><a href="pricing.html" data-i18n="page.pricing">Pricing</a></li>
         </ul>
 
         <div class="nav__actions-desktop">
-          <button class="icon-btn" type="button" aria-label="Idioma">
+          <button
+            class="icon-btn lang-toggle-desktop"
+            type="button"
+            data-i18n-aria="nav.aria_lang"
+            aria-label="Select language"
+            aria-expanded="false"
+            aria-haspopup="true"
+          >
             <i data-lucide="globe" class="icon"></i>
           </button>
-          <button class="icon-btn" type="button" aria-label="Cuenta">
+          <button
+            class="icon-btn"
+            type="button"
+            data-i18n-aria="nav.aria_account"
+            aria-label="Account"
+          >
             <i data-lucide="circle-user" class="icon"></i>
           </button>
         </div>
 
-        <!-- Botón Menú (Móvil) -->
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <!-- Mobile Menu Toggle -->
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          data-i18n-aria="nav.open_menu"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
           <i data-lucide="menu" class="icon"></i>
         </button>
 
-        <!-- Menú Overlay (Móvil) -->
+        <!-- Mobile Menu Overlay -->
         <div class="nav__menu" id="navMenu">
           <div class="nav__menu-inner">
             <ul class="nav__links-mobile" role="list">
-              <li><a href="about.html" class="menu-link">About</a></li>
-              <li><a href="product.html" class="menu-link">Product</a></li>
-              <li><a href="pricing.html" class="menu-link">Pricing</a></li>
+              <li><a href="about.html" class="menu-link" data-i18n="page.about">About</a></li>
+              <li><a href="product.html" class="menu-link" data-i18n="page.product">Product</a></li>
+              <li><a href="pricing.html" class="menu-link" data-i18n="page.pricing">Pricing</a></li>
             </ul>
 
             <div class="nav__actions-mobile">
-              <button class="icon-btn-labeled" type="button">
+              <button class="icon-btn-labeled lang-toggle-mobile" type="button">
                 <i data-lucide="globe" class="icon"></i>
-                <span>Language</span>
+                <span data-i18n="nav.language">Language</span>
               </button>
               <button class="icon-btn-labeled" type="button">
                 <i data-lucide="circle-user" class="icon"></i>
-                <span>Account</span>
+                <span data-i18n="nav.account">Account</span>
               </button>
             </div>
           </div>
@@ -70,69 +88,70 @@
     <main>
       <!-- ABOUT HERO -->
       <section class="hero__about" id="product">
-        <div class="hero__bg" aria-hidden="true">          
-            <div class="about-placeholder">          
-          </div>
+        <div class="hero__bg" aria-hidden="true">
+          <div class="about-placeholder"></div>
         </div>
 
         <div class="hero__content container">
-          <p class="kicker">About Us</p>
-          <p >Making invisible data visible</p>          
+          <h1 class="kicker" data-i18n="about.hero_title">About Us</h1>
+          <p data-i18n="about.hero_subtitle">Making invisible data visible</p>
         </div>
       </section>
 
       <!-- VISION -->
       <section class="hero__about_vision" id="product">
-        <div class="hero__bg" aria-hidden="true">          
-            <div class="vision-placeholder">          
-          </div>
+        <div class="hero__bg" aria-hidden="true">
+          <div class="vision-placeholder"></div>
         </div>
 
         <div class="hero__content container">
-          <p class="kicker__about">The Vision Behind Clair</p>
-          <p class="subkicker__about">Clair was built from a desire to make invisible environmental data visible, actionable, and completely integrated into modern life.</p>
+          <h2 class="kicker__about" data-i18n="about.vision_title">The Vision Behind Clair</h2>
+          <p class="subkicker__about" data-i18n="about.vision_desc">Clair was built from a desire to make invisible environmental data visible, actionable, and completely integrated into modern life.</p>
         </div>
       </section>
 
-      <!-- CLAIR TEAM  -->
+      <!-- CLAIR TEAM -->
       <section class="section section--dark" id="about">
         <div class="container">
-            <div class="container">
-                <header class="split__header">
-                    <h2>The Clair Team</h2>
-                    <p>
-                        A multidisciplinary group of developers and designers bridging the gap between robust IoT engineering and pure, minimalist design.
-                    </p>
-                </header>
-            </div>          
-            <div class="split-media" aria-hidden="true">
-                <img src="assets/gym.png" alt="Clair Banner" style="width:100%;height:100%;object-fit:cover;" />
-            </div>               
+          <div class="container">
+            <header class="split__header">
+              <h2 data-i18n="about.team_title">The Clair Team</h2>
+              <p data-i18n="about.team_desc">
+                A multidisciplinary group of developers and designers bridging the gap between robust IoT engineering and pure, minimalist design.
+              </p>
+            </header>
           </div>
-        </div>  
+          <div class="split-media" aria-hidden="true">
+            <img src="assets/team.png" alt="Clair Team" style="width:100%;height:100%;object-fit:cover;" />
+          </div>
+        </div>
+      </section>
 
-      </section>     
-
-      <!-- OFFICE (PLACEHOLDER) -->
-      <section class="section section--dark section--split" aria-label="Invisible Protection">       
+      <!-- BANNER -->
+      <section
+        class="section section--dark section--split"
+        data-i18n-aria="about.invisible_label"
+        aria-label="Invisible Protection"
+      >
         <div class="split-media" aria-hidden="true">
           <img src="assets/banner.png" alt="Clair Banner" style="width:100%;height:100%;object-fit:cover;" />
         </div>
       </section>
-      
     </main>
 
     <footer class="footer">
       <div class="container footer__inner">
         <small>Clair © 2026</small>
-        <ul class="footer__links" role="list" aria-label="Enlaces">
-          <li><a href="about.html">About</a></li>
-          <li><a href="product.html">Product</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Contact</a></li>
+        <ul class="footer__links" role="list" data-i18n-aria="footer.links_label" aria-label="Links">
+          <li><a href="about.html" data-i18n="page.about">About</a></li>
+          <li><a href="product.html" data-i18n="page.product">Product</a></li>
+          <li><a href="pricing.html" data-i18n="page.pricing">Pricing</a></li>
+          <li><a href="privacy.html" data-i18n="page.privacy">Privacy</a></li>
+          <li><a href="contact.html" data-i18n="page.contact">Contact</a></li>
         </ul>
       </div>
+    </footer>
     <script src="menu.js"></script>
+    <script src="i18n.js"></script>
   </body>
 </html>

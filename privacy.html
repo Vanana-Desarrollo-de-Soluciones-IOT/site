@@ -1,225 +1,326 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy & Legal - Clair</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Privacy & Legal - Clair</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <style>
+            .legal-hero {
+                padding: 100px 0 60px;
+                background: linear-gradient(180deg, #000 0%, #07090b 100%);
+                color: #fff;
+            }
 
-      .legal-hero {
-        padding: 100px 0 60px;
-        background: linear-gradient(180deg,#000 0%, #07090b 100%);
-        color: #fff;
-      }
+            .legal-container {
+                display: grid;
+                grid-template-columns: 1fr 360px;
+                gap: 48px;
+                align-items: start;
+            }
 
-      .legal-container {
-        display: grid;
-        grid-template-columns: 1fr 360px;
-        gap: 48px;
-        align-items: start;
-      }
+            .legal-title {
+                font-family: "Inter", system-ui, sans-serif;
+                font-size: clamp(40px, 6vw, 56px);
+                line-height: 1.05;
+                margin: 0 0 16px;
+                font-weight: 600;
+                background: linear-gradient(
+                    135deg,
+                    #fff 0%,
+                    rgba(255, 255, 255, 0.9) 100%
+                );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
 
-      .legal-title {
-        font-family: 'Space Grotesk', Inter, system-ui, sans-serif;
-        font-size: clamp(40px, 6vw, 56px);
-        line-height: 1.05;
-        margin: 0 0 16px;
-        font-weight: 600;
-        background: linear-gradient(135deg,#fff 0%, rgba(255,255,255,0.9) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
+            .legal-lead {
+                margin-bottom: 24px;
+                color: var(--muted);
+                max-width: 720px;
+                font-size: 16px;
+            }
 
-      .legal-lead {
-        margin-bottom: 24px;
-        color: var(--muted);
-        max-width: 720px;
-        font-size: 16px;
-      }
+            .legal-section {
+                margin-bottom: 36px;
+            }
 
-      .legal-section {
-        margin-bottom: 36px;
-      }
+            .legal-section h2 {
+                margin: 0 0 8px;
+                font-size: 18px;
+                color: #fff;
+                font-weight: 600;
+            }
 
-      .legal-section h3 {
-        margin: 0 0 8px;
-        font-size: 18px;
-        color: #fff;
-        font-weight: 600;
-      }
+            .legal-section p {
+                margin: 0;
+                color: var(--muted);
+                line-height: 1.6;
+            }
 
-      .legal-section p {
-        margin: 0;
-        color: var(--muted);
-        line-height: 1.6;
-      }
+            .legal-sidebar {
+                background: transparent;
+                /* start the sidebar a bit lower so its first item aligns visually with the title */
+                position: relative;
+                top: 0;
+                align-self: start;
+                margin-top: 48px; /* increased so it starts noticeably below the title */
+            }
 
-      .legal-sidebar {
-        background: transparent;
-        /* start the sidebar a bit lower so its first item aligns visually with the title */
-        position: relative;
-        top: 0;
-        align-self: start;
-        margin-top: 48px; /* increased so it starts noticeably below the title */
-      }
+            .legal-links {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: grid;
+                gap: 12px;
+            }
 
-      .legal-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: grid;
-        gap: 12px;
-      }
+            .legal-links a {
+                /* make sidebar links white and bold to match guidelines */
+                color: #fff;
+                text-decoration: none;
+                font-weight: 700;
+            }
 
-      .legal-links a {
-        /* make sidebar links white and bold to match guidelines */
-        color: #fff;
-        text-decoration: none;
-        font-weight: 700;
-      }
+            .legal-links a:hover {
+                text-decoration: underline;
+            }
 
-      .legal-links a:hover { text-decoration: underline; }
+            .legal-footer-note {
+                margin-top: 28px;
+                color: var(--muted);
+                font-size: 13px;
+            }
 
-      .legal-footer-note {
-        margin-top: 28px;
-        color: var(--muted);
-        font-size: 13px;
-      }
+            @media (max-width: 900px) {
+                .legal-container {
+                    grid-template-columns: 1fr;
+                }
+                .legal-sidebar {
+                    position: static;
+                    margin-top: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav container" data-i18n-aria="nav.aria_nav" aria-label="Main">
+                <a class="brand" href="index.html">
+                    <img
+                        src="assets/clair.svg"
+                        alt="Clair Logo"
+                        class="brand__logo"
+                    />
+                    <span class="sr-only">Clair</span>
+                </a>
 
-      @media (max-width: 900px) {
-        .legal-container { grid-template-columns: 1fr; }
-        .legal-sidebar { position: static; margin-top: 0; }
-      }
-    </style>
-  </head>
-  <body>
-    <header class="header">
-      <nav class="nav container" aria-label="Main">
-        <a class="brand" href="index.html">
-          <img src="assets/clair.svg" alt="Clair Logo" class="brand__logo" />
-          <span class="sr-only">Clair</span>
-        </a>
+                <ul class="nav__links-desktop" role="list">
+                    <li><a href="about.html" data-i18n="page.about">About</a></li>
+                    <li><a href="product.html" data-i18n="page.product">Product</a></li>
+                    <li><a href="pricing.html" data-i18n="page.pricing">Pricing</a></li>
+                </ul>
 
-        <ul class="nav__links-desktop" role="list">
-          <li><a href="about.html">About</a></li>
-          <li><a href="product.html">Product</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-        </ul>
+                <div class="nav__actions-desktop">
+                    <button
+                        class="icon-btn lang-toggle-desktop"
+                        type="button"
+                        data-i18n-aria="nav.aria_lang"
+                        aria-label="Select language"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                    >
+                        <i data-lucide="globe" class="icon"></i>
+                    </button>
+                    <button
+                        class="icon-btn"
+                        type="button"
+                        data-i18n-aria="nav.aria_account"
+                        aria-label="Account"
+                    >
+                        <i data-lucide="circle-user" class="icon"></i>
+                    </button>
+                </div>
 
-        <div class="nav__actions-desktop">
-          <button class="icon-btn" type="button" aria-label="Language">
-            <i data-lucide="globe" class="icon"></i>
-          </button>
-          <button class="icon-btn" type="button" aria-label="Account">
-            <i data-lucide="circle-user" class="icon"></i>
-          </button>
-        </div>
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    data-i18n-aria="nav.open_menu"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                >
+                    <i data-lucide="menu" class="icon"></i>
+                </button>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
-          <i data-lucide="menu" class="icon"></i>
-        </button>
-      </nav>
-    </header>
+                <!-- Mobile Menu Overlay -->
+                <div class="nav__menu" id="navMenu">
+                    <div class="nav__menu-inner">
+                        <ul class="nav__links-mobile" role="list">
+                            <li>
+                                <a href="about.html" class="menu-link" data-i18n="page.about">About</a>
+                            </li>
+                            <li>
+                                <a href="product.html" class="menu-link" data-i18n="page.product">Product</a>
+                            </li>
+                            <li>
+                                <a href="pricing.html" class="menu-link" data-i18n="page.pricing">Pricing</a>
+                            </li>
+                        </ul>
 
-    <main>
-      <section class="legal-hero">
-        <div class="container legal-container">
-          <div>
-            <h1 class="legal-title">Legal & Privacy</h1>
-            <p class="legal-lead">This page summarizes Clair's legal notices, privacy practices and policies. Use the links on the right to jump to specific documents and resources.</p>
-
-            <article class="legal-section" id="privacy">
-              <h3>Privacy Policy</h3>
-              <p>We collect and process data to provide and improve our products and services. We are committed to protecting your personal information and being transparent about how it is used. For full details, consult the full policy linked to the right.</p>
-            </article>
-
-            <article class="legal-section" id="terms">
-              <h3>Terms of Use</h3>
-              <p>These terms govern your access to and use of Clair products and websites. By using our services you agree to these terms. Please review them carefully.</p>
-            </article>
-
-            <article class="legal-section" id="cookies">
-              <h3>Cookies & Tracking</h3>
-              <p>We use cookies and similar technologies to ensure the site works correctly and to personalize content. You can control cookie preferences in your browser.</p>
-            </article>
-
-            <article class="legal-section" id="data-processing">
-              <h3>Data Processing</h3>
-              <p>Information about how we process personal data for product functionality, analytics and service delivery. Businesses can request data processing addenda where applicable.</p>
-            </article>
-
-            <article class="legal-section" id="security">
-              <h3>Security</h3>
-              <p>We implement reasonable administrative, technical, and physical safeguards to protect personal information. No system can be 100% secure, but we continuously work to improve our defenses.</p>
-            </article>
-
-            <article class="legal-section" id="contact-legal">
-              <h3>Contact</h3>
-              <p>If you have legal or privacy questions, email <a href="mailto:privacy&#64;clair.com">privacy&#64;clair.com</a> or use the contact page to reach support.</p>
-            </article>
-          </div>
-
-          <aside class="legal-sidebar">
-            <nav aria-label="Legal quick links">
-              <ul class="legal-links">
-                <li><a href="#privacy">Privacy Policy</a></li>
-                <li><a href="#terms">Terms of Use</a></li>
-                <li><a href="#cookies">Cookies & Tracking</a></li>
-                <li><a href="#data-processing">Data Processing</a></li>
-                <li><a href="#security">Security</a></li>
-                <li><a href="#contact-legal">Contact</a></li>
-                <li><a href="contact.html">Contact Page</a></li>
-              </ul>
+                        <div class="nav__actions-mobile">
+                            <button class="icon-btn-labeled lang-toggle-mobile" type="button">
+                                <i data-lucide="globe" class="icon"></i>
+                                <span data-i18n="nav.language">Language</span>
+                            </button>
+                            <button class="icon-btn-labeled" type="button">
+                                <i data-lucide="circle-user" class="icon"></i>
+                                <span data-i18n="nav.account">Account</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </nav>
+        </header>
 
-            <div class="legal-footer-note">
-              <small>Last updated: May 2026</small>
+        <main>
+            <section class="legal-hero">
+                <div class="container legal-container">
+                    <div>
+                        <h1 class="legal-title" data-i18n="privacy.title">Legal & Privacy</h1>
+                        <p class="legal-lead" data-i18n="privacy.lead">
+                            This page summarizes Clair's legal notices, privacy
+                            practices and policies. Use the links on the right
+                            to jump to specific documents and resources.
+                        </p>
+
+                        <article class="legal-section" id="privacy">
+                            <h2 data-i18n="privacy.policy_title">Privacy Policy</h2>
+                            <p data-i18n="privacy.policy_text">
+                                We collect and process data to provide and
+                                improve our products and services. We are
+                                committed to protecting your personal
+                                information and being transparent about how it
+                                is used. For full details, consult the full
+                                policy linked to the right.
+                            </p>
+                        </article>
+
+                        <article class="legal-section" id="terms">
+                            <h2 data-i18n="privacy.terms_title">Terms of Use</h2>
+                            <p data-i18n="privacy.terms_text">
+                                These terms govern your access to and use of
+                                Clair products and websites. By using our
+                                services you agree to these terms. Please review
+                                them carefully.
+                            </p>
+                        </article>
+
+                        <article class="legal-section" id="cookies">
+                            <h2 data-i18n="privacy.cookies_title">Cookies & Tracking</h2>
+                            <p data-i18n="privacy.cookies_text">
+                                We use cookies and similar technologies to
+                                ensure the site works correctly and to
+                                personalize content. You can control cookie
+                                preferences in your browser.
+                            </p>
+                        </article>
+
+                        <article class="legal-section" id="data-processing">
+                            <h2 data-i18n="privacy.data_title">Data Processing</h2>
+                            <p data-i18n="privacy.data_text">
+                                Information about how we process personal data
+                                for product functionality, analytics and service
+                                delivery. Businesses can request data processing
+                                addenda where applicable.
+                            </p>
+                        </article>
+
+                        <article class="legal-section" id="security">
+                            <h2 data-i18n="privacy.security_title">Security</h2>
+                            <p data-i18n="privacy.security_text">
+                                We implement reasonable administrative,
+                                technical, and physical safeguards to protect
+                                personal information. No system can be 100%
+                                secure, but we continuously work to improve our
+                                defenses.
+                            </p>
+                        </article>
+
+                        <article class="legal-section" id="contact-legal">
+                            <h2 data-i18n="privacy.contact_title">Contact</h2>
+                            <p data-i18n-html="privacy.contact_text">
+                                If you have legal or privacy questions, email
+                                <a href="mailto:privacy&#64;clair.com"
+                                    >privacy&#64;clair.com</a
+                                >
+                                or use the contact page to reach support.
+                            </p>
+                        </article>
+                    </div>
+
+                    <aside class="legal-sidebar">
+                        <nav data-i18n-aria="privacy.nav_label" aria-label="Legal quick links">
+                            <ul class="legal-links">
+                                <li><a href="#privacy" data-i18n="privacy.sidebar_policy">Privacy Policy</a></li>
+                                <li><a href="#terms" data-i18n="privacy.sidebar_terms">Terms of Use</a></li>
+                                <li><a href="#cookies" data-i18n="privacy.sidebar_cookies">Cookies & Tracking</a></li>
+                                <li><a href="#data-processing" data-i18n="privacy.sidebar_data">Data Processing</a></li>
+                                <li><a href="#security" data-i18n="privacy.sidebar_security">Security</a></li>
+                                <li><a href="#contact-legal" data-i18n="privacy.sidebar_contact">Contact</a></li>
+                                <li><a href="contact.html" data-i18n="privacy.sidebar_contact_page">Contact Page</a></li>
+                            </ul>
+                        </nav>
+
+                        <div class="legal-footer-note">
+                            <small data-i18n="privacy.last_updated">Last updated: May 2026</small>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container footer__inner">
+                <small>Clair © 2026</small>
+                <ul class="footer__links" role="list" data-i18n-aria="footer.links_label" aria-label="Links">
+                    <li><a href="about.html" data-i18n="page.about">About</a></li>
+                    <li><a href="product.html" data-i18n="page.product">Product</a></li>
+                    <li><a href="pricing.html" data-i18n="page.pricing">Pricing</a></li>
+                    <li><a href="privacy.html" data-i18n="page.privacy">Privacy</a></li>
+                    <li><a href="contact.html" data-i18n="page.contact">Contact</a></li>
+                </ul>
             </div>
-          </aside>
-        </div>
-      </section>
-    </main>
+        </footer>
 
-    <footer class="footer">
-      <div class="container footer__inner">
-        <small>Clair © 2026</small>
-        <ul class="footer__links" role="list" aria-label="Links">
-          <li><a href="about.html">About</a></li>
-          <li><a href="product.html">Product</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </footer>
+        <script>
+            lucide.createIcons();
 
-    <script>
-      lucide.createIcons();
+            const menuToggle = document.getElementById("menuToggle");
+            const navMenu = document.getElementById("navMenu");
 
-      const menuToggle = document.getElementById('menuToggle');
-      const navMenu = document.getElementById('navMenu');
+            function toggleMenu() {
+                const expanded =
+                    menuToggle.getAttribute("aria-expanded") === "true";
+                menuToggle.setAttribute("aria-expanded", !expanded);
+                if (navMenu) navMenu.classList.toggle("is-active");
+                document.body.classList.toggle("menu-open");
+                menuToggle.innerHTML = !expanded
+                    ? '<i data-lucide="x" class="icon"></i>'
+                    : '<i data-lucide="menu" class="icon"></i>';
+                lucide.createIcons();
+            }
 
-      function toggleMenu() {
-        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', !expanded);
-        if (navMenu) navMenu.classList.toggle('is-active');
-        document.body.classList.toggle('menu-open');
-        menuToggle.innerHTML = !expanded ? '<i data-lucide="x" class="icon"></i>' : '<i data-lucide="menu" class="icon"></i>';
-        lucide.createIcons();
-      }
-
-      if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
-    </script>
-  </body>
+            if (menuToggle) menuToggle.addEventListener("click", toggleMenu);
+        </script>
+        <script src="i18n.js"></script>
+    </body>
 </html>
-
