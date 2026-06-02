@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(Select-String -Path \"C:\\\\Users\\\\Usuario\\\\Documents\\\\Code\\\\Universidad\\\\202601\\\\IOT\\\\site\\\\contact.html\" -Pattern \"</body>\")",
-      "Bash(Select-Object LineNumber)"
-    ]
-  }
-}
